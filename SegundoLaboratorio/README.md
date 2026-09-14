@@ -49,3 +49,19 @@ En este laboratorio se utilizó la inteligencia artificial para:
 - La función construir_niveles (algunas partes de la función)
 - Mostrar el árbol usando la librería `anytree` (incluye la función para convertir el árbol)
 - Aplicar la función `choice()` para poder escoger un elemento de manera aleatoria de una lista en específico
+
+---
+
+## Pantallazos de las Verificaciones
+
+### Experimento 1
+<img width="681" height="632" alt="image" src="https://github.com/user-attachments/assets/b8063bc0-cb72-48b8-82e4-4dce99bb935e" />
+<img width="797" height="610" alt="image" src="https://github.com/user-attachments/assets/503197a8-3445-4796-bafb-e2bdd254b693" />
+
+
+
+### Experimento 2
+<img width="647" height="30" alt="image" src="https://github.com/user-attachments/assets/e08fcbc5-132a-43ae-b654-25d13628b072" />
+
+<img width="512" height="205" alt="image" src="https://github.com/user-attachments/assets/f78f0d64-a6cc-4e30-892d-e72a54a3b4e9" />
+
