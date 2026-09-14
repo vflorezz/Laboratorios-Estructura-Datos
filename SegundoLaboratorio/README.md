@@ -61,7 +61,6 @@ En este laboratorio se utilizó la inteligencia artificial para:
 
 
 ### Experimento 2
-<img width="647" height="30" alt="image" src="https://github.com/user-attachments/assets/e08fcbc5-132a-43ae-b654-25d13628b072" />
 
 <img width="512" height="205" alt="image" src="https://github.com/user-attachments/assets/f78f0d64-a6cc-4e30-892d-e72a54a3b4e9" />
 
