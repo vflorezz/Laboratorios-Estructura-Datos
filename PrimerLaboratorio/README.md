@@ -1,4 +1,4 @@
-# Laboratorio1ED
+# Laboratorio 1
 
 
 ## Descripción
