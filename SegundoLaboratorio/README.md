@@ -14,8 +14,8 @@ En este trabajo, un bloque de datos se manejó como una transacción.
 
 ## Archivos del Repositorio
 
-### `ArbolMerkel.py`
-Contiene la implementación del árbol de Merkel, mediante el uso de:
+### `ArbolMerkle.py`
+Contiene la implementación del árbol de Merkle, mediante el uso de:
 - Una clase Nodo (con atributos: hash, izquierdo, derecho)
 - Una función para calcular hash que usa como parámetro la transacción a hashear
 - Una función para generar transacciones
@@ -32,7 +32,7 @@ Al final:
 - Se llama a la función para convertir el árbol
 - Se muestra en pantalla el árbol de Merkle
 
-### `VerificacionesArbolMerkel.py`
+### `VerificacionesArbolMerkle.py`
 Contiene los experimentos:
 - Crear 5 bloques de datos (pueden ser transacciones simuladas)
 - Construir el árbol y mostrar la raíz
