@@ -1,5 +1,5 @@
 # Laboratorio #2
----
+
 
 ## Descripción
 En este laboratorio se realizó la implementación de un árbol de Merkle con las siguientes especificaciones:
@@ -44,3 +44,8 @@ Los experimentos 1 y 2 se encuentran como funciones llamadas `exp_1` y `exp_2`, 
 ---
 
 ## Sobre el Uso de IA
+En este laboratorio se utilizó la inteligencia artificial para:
+- La función construir_arbol
+- La función construir_niveles (algunas partes de la función)
+- Mostrar el árbol usando la librería `anytree` (incluye la función para convertir el árbol)
+- Aplicar la función `choice()` para poder escoger un elemento de manera aleatoria de una lista en específico
