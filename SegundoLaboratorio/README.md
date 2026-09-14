@@ -26,7 +26,7 @@ Contiene la implementación del árbol de Merkel, mediante el uso de:
 
 Al final:
 - Se define una lista de nombres predeterminados (hacen parte de las transacciones)
-- Se define el número de transacciones ( = 5)
+- Se define el número de transacciones (= 5)
 - Se llama a la función para generar los nodos y se guarda la lista en una variable
 - Se llama a la función para construir el árbol (se usa la lista de nodos) y se guarda la raíz en una variable
 - Se llama a la función para convertir el árbol
@@ -36,5 +36,11 @@ Al final:
 Contiene los experimentos:
 - Crear 5 bloques de datos (pueden ser transacciones simuladas)
 - Construir el árbol y mostrar la raíz
-- Modificar un bloque y demostrar que la raíz cambia
-- Generar una prueba de inclusión para el bloque 3 y verificar que es válida. Intentar verificar con un dato incorrecto → debe fallar
+- Modificar un bloque y demostrar que la raíz cambia (Experimento 1)
+- Generar una prueba de inclusión para el bloque 3 y verificar que es válida. Intentar verificar con un dato incorrecto → debe fallar (Experimento 2)
+
+Los experimentos 1 y 2 se encuentran como funciones llamadas `exp_1` y `exp_2`, respectivamente.
+
+---
+
+## Sobre el Uso de IA
