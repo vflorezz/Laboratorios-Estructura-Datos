@@ -1,9 +1,8 @@
 # Laboratorio1ED
 
-**Estudiante:** Valentina Flórez Acosta
 
 ## Descripción
-Este repositorio presenta la solución al problema planteado en clase para el laboratorio #1 de Estructuras de Datos y Laboratorio.
+Aquí se presenta la solución al problema planteado en clase para el laboratorio #1 de Estructuras de Datos y Laboratorio.
 
 Este proyecto consiste en la generación de una matriz de gran tamaño compuesta únicamente por los valores `0` y `1`. La matriz tiene **100.000 filas y 100.000 columnas**, por lo que contiene un total de 10.000 millones de elementos.
 
