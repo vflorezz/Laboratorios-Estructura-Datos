@@ -23,6 +23,7 @@ Contiene la implementación del árbol de Merkel, mediante el uso de:
 - Una función para construir los niveles del árbol (aquí es donde si el numero de hojas es impar, la última se duplica)
 - Una función para construir el árbol, la cual llama a la función de los niveles y finalmente, retorna la raíz del árbol
 - Una función para convertir el árbol para usar anytree
+
 Al final:
 - Se define una lista de nombres predeterminados (hacen parte de las transacciones)
 - Se define el número de transacciones ( = 5)
