@@ -33,3 +33,8 @@ Al final:
 - Se muestra en pantalla el árbol de Merkel
 
 ### `VerificacionesArbolMerkel.py`
+Contiene los experimentos:
+- Crear 5 bloques de datos (pueden ser transacciones simuladas)
+- Construir el árbol y mostrar la raíz
+- Modificar un bloque y demostrar que la raíz cambia
+- Generar una prueba de inclusión para el bloque 3 y verificar que es válida. Intentar verificar con un dato incorrecto → debe fallar
