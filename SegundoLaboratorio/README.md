@@ -44,11 +44,11 @@ Los experimentos 1 y 2 se encuentran como funciones llamadas `exp_1` y `exp_2`, 
 ---
 
 ## Sobre el Uso de IA
-En este laboratorio se utilizó la inteligencia artificial para:
-- La función construir_arbol
-- La función construir_niveles (algunas partes de la función)
-- Mostrar el árbol usando la librería `anytree` (incluye la función para convertir el árbol)
-- Aplicar la función `choice()` para poder escoger un elemento de manera aleatoria de una lista en específico
+En este laboratorio se utilizó la inteligencia artificial como apoyo para:
+- Comprender cómo realizar la función `construir_arbol` y entender cómo ayuda la recursión en ella para construir el árbol
+- Comprender y desarrollar algunas partes de la función `construir_nivel_arbol`
+- Mostrar el árbol usando la librería `anytree`, específicamente `Node` y `RenderTree`, y desarrollar la función `convertir_arbol` para adaptar mi árbol a la representación visual de la librería
+- Descubrir y aplicar la función `choice()` para poder seleccionar un elemento de manera aleatoria de una lista
 
 ---
 
