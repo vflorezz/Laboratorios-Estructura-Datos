@@ -1,0 +1,5 @@
+Sistema operativo: Windows-11-10.0.26200-SP0
+Procesador: Intel64 Family 6 Model 154 Stepping 4, GenuineIntel
+Nucleos logicos: 12
+Python: 3.13.2 (tags/v3.13.2:4f8bb39, Feb  4 2025, 15:23:48) [MSC v.1942 64 bit (AMD64)]
+Parametros: N=[100, 500, 1000, 5000, 10000, 50000, 100000], repeticiones=10, M=1000, M_rangos=100, rangos={'muy_chico': 0.001, 'chico': 0.01, 'mediano': 0.1, 'enorme': 0.5}, grado B+=50, limites={('ABB', 'ordenado'): 10000, ('Lista', 'ordenado'): 10000, ('Lista', 'aleatorio'): 10000}
