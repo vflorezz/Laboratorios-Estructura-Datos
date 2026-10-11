@@ -1,256 +1,256 @@
 ﻿operacion,unidad,orden,estructura,N,ejecuciones,promedio,desv_estandar,mediana,atipicos_IQR
-búsqueda por ID,microsegundos por búsqueda,aleatorio,ABB,100,10,0.45801,0.136225,0.40895,2
-búsqueda por ID,microsegundos por búsqueda,aleatorio,ABB,500,10,0.64255,0.202442,0.5647,0
-búsqueda por ID,microsegundos por búsqueda,aleatorio,ABB,1000,10,0.69093,0.217004,0.5748,0
-búsqueda por ID,microsegundos por búsqueda,aleatorio,ABB,5000,10,0.947,0.369008,0.74595,1
-búsqueda por ID,microsegundos por búsqueda,aleatorio,ABB,10000,10,0.91028,0.143574,0.8663,1
-búsqueda por ID,microsegundos por búsqueda,aleatorio,ABB,20000,10,0.99053,0.0437129,0.98235,0
-búsqueda por ID,microsegundos por búsqueda,aleatorio,B+,100,10,1.35933,0.5681,1.3023,1
-búsqueda por ID,microsegundos por búsqueda,aleatorio,B+,500,10,1.24774,0.352801,1.11115,0
-búsqueda por ID,microsegundos por búsqueda,aleatorio,B+,1000,10,1.54735,0.316118,1.47615,1
-búsqueda por ID,microsegundos por búsqueda,aleatorio,B+,5000,10,1.94897,0.920284,1.6218,2
-búsqueda por ID,microsegundos por búsqueda,aleatorio,B+,10000,10,1.91664,0.285862,1.7802,0
-búsqueda por ID,microsegundos por búsqueda,aleatorio,B+,20000,10,2.17632,0.505396,2.0603,1
-búsqueda por ID,microsegundos por búsqueda,aleatorio,Lista,100,10,2.57948,0.723015,2.42225,0
-búsqueda por ID,microsegundos por búsqueda,aleatorio,Lista,500,10,9.32394,2.04799,8.65485,1
-búsqueda por ID,microsegundos por búsqueda,aleatorio,Lista,1000,10,21.1027,4.64984,20.1245,1
-búsqueda por ID,microsegundos por búsqueda,aleatorio,Lista,5000,10,87.8999,25.5208,78.1838,2
-búsqueda por ID,microsegundos por búsqueda,aleatorio,Lista,10000,10,155.616,12.8079,151.324,3
-búsqueda por ID,microsegundos por búsqueda,aleatorio,Lista,20000,10,316.172,12.5164,311.682,1
-búsqueda por ID,microsegundos por búsqueda,ordenado,ABB,100,10,2.0613,0.889643,1.62895,1
-búsqueda por ID,microsegundos por búsqueda,ordenado,ABB,500,10,9.39396,3.20666,8.3937,1
-búsqueda por ID,microsegundos por búsqueda,ordenado,ABB,1000,10,18.0356,2.41456,16.9524,2
-búsqueda por ID,microsegundos por búsqueda,ordenado,ABB,5000,10,89.9389,3.81189,89.7143,1
-búsqueda por ID,microsegundos por búsqueda,ordenado,ABB,10000,10,192.518,4.97914,193.283,0
-búsqueda por ID,microsegundos por búsqueda,ordenado,ABB,20000,10,504.815,88.984,488.628,1
-búsqueda por ID,microsegundos por búsqueda,ordenado,B+,100,10,0.98474,0.439947,0.7721,2
-búsqueda por ID,microsegundos por búsqueda,ordenado,B+,500,10,1.00816,0.11566,0.96925,1
-búsqueda por ID,microsegundos por búsqueda,ordenado,B+,1000,10,1.45054,0.178984,1.3898,2
-búsqueda por ID,microsegundos por búsqueda,ordenado,B+,5000,10,1.49543,0.248935,1.3883,1
-búsqueda por ID,microsegundos por búsqueda,ordenado,B+,10000,10,1.66093,0.086606,1.65775,0
-búsqueda por ID,microsegundos por búsqueda,ordenado,B+,20000,10,2.56068,0.868582,2.01125,0
-búsqueda por ID,microsegundos por búsqueda,ordenado,Lista,100,10,1.44289,0.32956,1.3423,1
-búsqueda por ID,microsegundos por búsqueda,ordenado,Lista,500,10,7.35665,1.07973,7.10295,0
-búsqueda por ID,microsegundos por búsqueda,ordenado,Lista,1000,10,15.2305,1.66086,15.1987,0
-búsqueda por ID,microsegundos por búsqueda,ordenado,Lista,5000,10,69.1927,2.89528,68.7489,0
-búsqueda por ID,microsegundos por búsqueda,ordenado,Lista,10000,10,146.425,4.35724,146.112,0
-búsqueda por ID,microsegundos por búsqueda,ordenado,Lista,20000,10,379.184,69.2749,344.363,0
-inserción de N estudiantes,milisegundos (total),aleatorio,ABB,100,10,0.06558,0.0280545,0.054,0
-inserción de N estudiantes,milisegundos (total),aleatorio,ABB,500,10,0.29902,0.0744029,0.27375,0
-inserción de N estudiantes,milisegundos (total),aleatorio,ABB,1000,10,0.7657,0.216047,0.7509,0
-inserción de N estudiantes,milisegundos (total),aleatorio,ABB,5000,10,4.3382,1.18516,3.58515,0
-inserción de N estudiantes,milisegundos (total),aleatorio,ABB,10000,10,8.36968,0.868584,7.9521,0
-inserción de N estudiantes,milisegundos (total),aleatorio,ABB,20000,10,17.9966,0.547507,17.7682,0
-inserción de N estudiantes,milisegundos (total),aleatorio,B+,100,10,0.2104,0.107133,0.1837,1
-inserción de N estudiantes,milisegundos (total),aleatorio,B+,500,10,0.70972,0.141866,0.66245,2
-inserción de N estudiantes,milisegundos (total),aleatorio,B+,1000,10,1.86809,0.418439,1.8611,1
-inserción de N estudiantes,milisegundos (total),aleatorio,B+,5000,10,12.1289,4.16189,10.7065,1
-inserción de N estudiantes,milisegundos (total),aleatorio,B+,10000,10,21.3039,0.545026,21.3262,0
-inserción de N estudiantes,milisegundos (total),aleatorio,B+,20000,10,47.0713,1.68441,46.9109,1
-inserción de N estudiantes,milisegundos (total),aleatorio,Lista,100,10,0.24998,0.0861862,0.2359,0
-inserción de N estudiantes,milisegundos (total),aleatorio,Lista,500,10,3.51781,0.66232,3.14615,0
-inserción de N estudiantes,milisegundos (total),aleatorio,Lista,1000,10,16.1226,2.76996,15.0802,0
-inserción de N estudiantes,milisegundos (total),aleatorio,Lista,5000,10,364.77,64.6428,341.044,1
-inserción de N estudiantes,milisegundos (total),aleatorio,Lista,10000,10,1239.93,19.7009,1236.21,1
-inserción de N estudiantes,milisegundos (total),aleatorio,Lista,20000,10,5100.02,139.122,5081.45,0
-inserción de N estudiantes,milisegundos (total),ordenado,ABB,100,10,0.24263,0.108418,0.1844,1
-inserción de N estudiantes,milisegundos (total),ordenado,ABB,500,10,6.21278,3.80142,5.26505,1
-inserción de N estudiantes,milisegundos (total),ordenado,ABB,1000,10,19.2368,1.25884,18.8826,1
-inserción de N estudiantes,milisegundos (total),ordenado,ABB,5000,10,515.066,8.67824,515.086,0
-inserción de N estudiantes,milisegundos (total),ordenado,ABB,10000,10,2231.16,12.1506,2231.73,0
-inserción de N estudiantes,milisegundos (total),ordenado,ABB,20000,10,11911,1860.98,11468.9,0
-inserción de N estudiantes,milisegundos (total),ordenado,B+,100,10,0.20627,0.120098,0.16085,2
-inserción de N estudiantes,milisegundos (total),ordenado,B+,500,10,1.19709,0.158809,1.1595,0
-inserción de N estudiantes,milisegundos (total),ordenado,B+,1000,10,3.06254,0.467302,2.97735,1
-inserción de N estudiantes,milisegundos (total),ordenado,B+,5000,10,18.8983,0.672031,18.8627,0
-inserción de N estudiantes,milisegundos (total),ordenado,B+,10000,10,42.4626,3.62147,41.2033,1
-inserción de N estudiantes,milisegundos (total),ordenado,B+,20000,10,111.986,22.7336,111.285,1
-inserción de N estudiantes,milisegundos (total),ordenado,Lista,100,10,0.13043,0.0260199,0.12095,1
-inserción de N estudiantes,milisegundos (total),ordenado,Lista,500,10,2.87555,0.309177,2.85415,0
-inserción de N estudiantes,milisegundos (total),ordenado,Lista,1000,10,12.8608,2.94964,11.8648,2
-inserción de N estudiantes,milisegundos (total),ordenado,Lista,5000,10,282.306,9.04747,281.095,1
-inserción de N estudiantes,milisegundos (total),ordenado,Lista,10000,10,1157.76,35.394,1145.85,2
-inserción de N estudiantes,milisegundos (total),ordenado,Lista,20000,10,5994.5,938.751,5707.11,0
-listado ordenado de N estudiantes,milisegundos,aleatorio,ABB,100,10,0.01935,0.00741354,0.016,1
-listado ordenado de N estudiantes,milisegundos,aleatorio,ABB,500,10,0.08125,0.0299484,0.08635,0
-listado ordenado de N estudiantes,milisegundos,aleatorio,ABB,1000,10,0.14041,0.0387355,0.12755,1
-listado ordenado de N estudiantes,milisegundos,aleatorio,ABB,5000,10,0.4545,0.0980166,0.424,0
-listado ordenado de N estudiantes,milisegundos,aleatorio,ABB,10000,10,0.8867,0.0984707,0.8461,0
-listado ordenado de N estudiantes,milisegundos,aleatorio,ABB,20000,10,1.76252,0.160849,1.7141,0
-listado ordenado de N estudiantes,milisegundos,aleatorio,B+,100,10,0.01217,0.00397438,0.01195,0
-listado ordenado de N estudiantes,milisegundos,aleatorio,B+,500,10,0.05078,0.0563293,0.03505,1
-listado ordenado de N estudiantes,milisegundos,aleatorio,B+,1000,10,0.08911,0.0443125,0.0746,2
-listado ordenado de N estudiantes,milisegundos,aleatorio,B+,5000,10,0.16227,0.0818467,0.12565,1
-listado ordenado de N estudiantes,milisegundos,aleatorio,B+,10000,10,0.22691,0.0194084,0.2305,0
-listado ordenado de N estudiantes,milisegundos,aleatorio,B+,20000,10,0.44569,0.0351071,0.43085,1
-listado ordenado de N estudiantes,milisegundos,aleatorio,Lista,100,10,0.02899,0.0222527,0.02535,1
-listado ordenado de N estudiantes,milisegundos,aleatorio,Lista,500,10,0.0807,0.0195701,0.07655,1
-listado ordenado de N estudiantes,milisegundos,aleatorio,Lista,1000,10,0.2049,0.0866656,0.1717,0
-listado ordenado de N estudiantes,milisegundos,aleatorio,Lista,5000,10,1.08938,0.192124,1.0741,0
-listado ordenado de N estudiantes,milisegundos,aleatorio,Lista,10000,10,1.9047,0.0677493,1.8835,1
-listado ordenado de N estudiantes,milisegundos,aleatorio,Lista,20000,10,4.27542,0.173796,4.22175,2
-listado ordenado de N estudiantes,milisegundos,ordenado,ABB,100,10,0.01462,0.00702579,0.0119,0
-listado ordenado de N estudiantes,milisegundos,ordenado,ABB,500,10,0.07479,0.0402749,0.06155,2
-listado ordenado de N estudiantes,milisegundos,ordenado,ABB,1000,10,0.08108,0.0132005,0.0766,3
-listado ordenado de N estudiantes,milisegundos,ordenado,ABB,5000,10,0.36198,0.0717658,0.3357,2
-listado ordenado de N estudiantes,milisegundos,ordenado,ABB,10000,10,0.67389,0.11001,0.63855,1
-listado ordenado de N estudiantes,milisegundos,ordenado,ABB,20000,10,1.84059,0.491927,2.0238,0
-listado ordenado de N estudiantes,milisegundos,ordenado,B+,100,10,0.00827,0.00334267,0.00694999,2
-listado ordenado de N estudiantes,milisegundos,ordenado,B+,500,10,0.02834,0.0114654,0.0287,0
-listado ordenado de N estudiantes,milisegundos,ordenado,B+,1000,10,0.05938,0.0152938,0.0598,0
-listado ordenado de N estudiantes,milisegundos,ordenado,B+,5000,10,0.10841,0.0277347,0.0968,2
-listado ordenado de N estudiantes,milisegundos,ordenado,B+,10000,10,0.19266,0.0155069,0.19245,0
-listado ordenado de N estudiantes,milisegundos,ordenado,B+,20000,10,0.41105,0.099218,0.3626,1
-listado ordenado de N estudiantes,milisegundos,ordenado,Lista,100,10,0.00524,0.0019489,0.00504999,0
-listado ordenado de N estudiantes,milisegundos,ordenado,Lista,500,10,0.01259,0.00338902,0.01265,0
-listado ordenado de N estudiantes,milisegundos,ordenado,Lista,1000,10,0.02193,0.0126736,0.017,1
-listado ordenado de N estudiantes,milisegundos,ordenado,Lista,5000,10,0.10368,0.0362439,0.08665,1
-listado ordenado de N estudiantes,milisegundos,ordenado,Lista,10000,10,0.27037,0.127247,0.2106,0
-listado ordenado de N estudiantes,milisegundos,ordenado,Lista,20000,10,0.61407,0.168768,0.61935,1
-"búsqueda por rango (0,1% de los IDs)",milisegundos por consulta,aleatorio,ABB,100,10,0.0007689,0.000249493,0.0006835,0
-"búsqueda por rango (0,1% de los IDs)",milisegundos por consulta,aleatorio,ABB,500,10,0.0012021,0.000539446,0.000972,0
-"búsqueda por rango (0,1% de los IDs)",milisegundos por consulta,aleatorio,ABB,1000,10,0.0011201,0.00029841,0.0010335,0
-"búsqueda por rango (0,1% de los IDs)",milisegundos por consulta,aleatorio,ABB,5000,10,0.0023362,0.000861284,0.0018005,0
-"búsqueda por rango (0,1% de los IDs)",milisegundos por consulta,aleatorio,ABB,10000,10,0.0026721,0.000199005,0.0026825,0
-"búsqueda por rango (0,1% de los IDs)",milisegundos por consulta,aleatorio,ABB,20000,10,0.0043076,0.000326963,0.0042475,0
-"búsqueda por rango (0,1% de los IDs)",milisegundos por consulta,aleatorio,B+,100,10,0.0015531,0.000425559,0.001486,0
-"búsqueda por rango (0,1% de los IDs)",milisegundos por consulta,aleatorio,B+,500,10,0.0014933,0.000425655,0.001325,0
-"búsqueda por rango (0,1% de los IDs)",milisegundos por consulta,aleatorio,B+,1000,10,0.0017984,0.000752405,0.001517,1
-"búsqueda por rango (0,1% de los IDs)",milisegundos por consulta,aleatorio,B+,5000,10,0.0026164,0.00134023,0.002124,2
-"búsqueda por rango (0,1% de los IDs)",milisegundos por consulta,aleatorio,B+,10000,10,0.0026242,0.000130819,0.002661,0
-"búsqueda por rango (0,1% de los IDs)",milisegundos por consulta,aleatorio,B+,20000,10,0.0033717,6.8657e-05,0.003382,0
-"búsqueda por rango (0,1% de los IDs)",milisegundos por consulta,aleatorio,Lista,100,10,0.0045189,0.00175412,0.004016,2
-"búsqueda por rango (0,1% de los IDs)",milisegundos por consulta,aleatorio,Lista,500,10,0.0176599,0.00432717,0.016322,1
-"búsqueda por rango (0,1% de los IDs)",milisegundos por consulta,aleatorio,Lista,1000,10,0.0297342,0.00522215,0.027351,1
-"búsqueda por rango (0,1% de los IDs)",milisegundos por consulta,aleatorio,Lista,5000,10,0.149341,0.0381811,0.13537,2
-"búsqueda por rango (0,1% de los IDs)",milisegundos por consulta,aleatorio,Lista,10000,10,0.284677,0.0336223,0.274445,1
-"búsqueda por rango (0,1% de los IDs)",milisegundos por consulta,aleatorio,Lista,20000,10,0.551869,0.0229207,0.543909,0
-"búsqueda por rango (0,1% de los IDs)",milisegundos por consulta,ordenado,ABB,100,10,0.0021541,0.00106559,0.0016465,0
-"búsqueda por rango (0,1% de los IDs)",milisegundos por consulta,ordenado,ABB,500,10,0.0076884,0.00143366,0.0072725,1
-"búsqueda por rango (0,1% de los IDs)",milisegundos por consulta,ordenado,ABB,1000,10,0.0156437,0.00201804,0.0155245,0
-"búsqueda por rango (0,1% de los IDs)",milisegundos por consulta,ordenado,ABB,5000,10,0.0811985,0.0103037,0.0784475,1
-"búsqueda por rango (0,1% de los IDs)",milisegundos por consulta,ordenado,ABB,10000,10,0.181311,0.0181516,0.17678,0
-"búsqueda por rango (0,1% de los IDs)",milisegundos por consulta,ordenado,ABB,20000,10,0.516314,0.141921,0.47445,0
-"búsqueda por rango (0,1% de los IDs)",milisegundos por consulta,ordenado,B+,100,10,0.0011576,0.000411244,0.0009075,0
-"búsqueda por rango (0,1% de los IDs)",milisegundos por consulta,ordenado,B+,500,10,0.0011574,0.000174015,0.00111,1
-"búsqueda por rango (0,1% de los IDs)",milisegundos por consulta,ordenado,B+,1000,10,0.0017096,0.000227737,0.001652,1
-"búsqueda por rango (0,1% de los IDs)",milisegundos por consulta,ordenado,B+,5000,10,0.002126,0.00057993,0.0018615,1
-"búsqueda por rango (0,1% de los IDs)",milisegundos por consulta,ordenado,B+,10000,10,0.0024805,0.000226548,0.0023905,0
-"búsqueda por rango (0,1% de los IDs)",milisegundos por consulta,ordenado,B+,20000,10,0.0040103,0.00118378,0.0033915,0
-"búsqueda por rango (0,1% de los IDs)",milisegundos por consulta,ordenado,Lista,100,10,0.0037919,0.00231543,0.002721,2
-"búsqueda por rango (0,1% de los IDs)",milisegundos por consulta,ordenado,Lista,500,10,0.0145076,0.00544323,0.012105,1
-"búsqueda por rango (0,1% de los IDs)",milisegundos por consulta,ordenado,Lista,1000,10,0.0259523,0.00598172,0.0239205,2
-"búsqueda por rango (0,1% de los IDs)",milisegundos por consulta,ordenado,Lista,5000,10,0.124311,0.00901783,0.121643,2
-"búsqueda por rango (0,1% de los IDs)",milisegundos por consulta,ordenado,Lista,10000,10,0.259195,0.0068819,0.261213,0
-"búsqueda por rango (0,1% de los IDs)",milisegundos por consulta,ordenado,Lista,20000,10,0.763287,0.193045,0.729802,0
-búsqueda por rango (1% de los IDs),milisegundos por consulta,aleatorio,ABB,100,10,0.0008459,0.000134901,0.000846,0
-búsqueda por rango (1% de los IDs),milisegundos por consulta,aleatorio,ABB,500,10,0.0015469,0.000503642,0.0014235,1
-búsqueda por rango (1% de los IDs),milisegundos por consulta,aleatorio,ABB,1000,10,0.0022851,0.000604856,0.0020205,1
-búsqueda por rango (1% de los IDs),milisegundos por consulta,aleatorio,ABB,5000,10,0.0093153,0.00255821,0.0087265,0
-búsqueda por rango (1% de los IDs),milisegundos por consulta,aleatorio,ABB,10000,10,0.014952,0.0014838,0.014911,0
-búsqueda por rango (1% de los IDs),milisegundos por consulta,aleatorio,ABB,20000,10,0.0313455,0.00351268,0.030617,2
-búsqueda por rango (1% de los IDs),milisegundos por consulta,aleatorio,B+,100,10,0.0015616,0.000568978,0.001466,2
-búsqueda por rango (1% de los IDs),milisegundos por consulta,aleatorio,B+,500,10,0.0015919,0.000441216,0.001462,1
-búsqueda por rango (1% de los IDs),milisegundos por consulta,aleatorio,B+,1000,10,0.0025332,0.000808738,0.0022365,2
-búsqueda por rango (1% de los IDs),milisegundos por consulta,aleatorio,B+,5000,10,0.0065752,0.00514209,0.004442,2
-búsqueda por rango (1% de los IDs),milisegundos por consulta,aleatorio,B+,10000,10,0.0077008,0.000186513,0.007698,0
-búsqueda por rango (1% de los IDs),milisegundos por consulta,aleatorio,B+,20000,10,0.0153126,0.0023045,0.014212,2
-búsqueda por rango (1% de los IDs),milisegundos por consulta,aleatorio,Lista,100,10,0.0051598,0.00306264,0.004218,2
-búsqueda por rango (1% de los IDs),milisegundos por consulta,aleatorio,Lista,500,10,0.0173414,0.00325166,0.01656,0
-búsqueda por rango (1% de los IDs),milisegundos por consulta,aleatorio,Lista,1000,10,0.0356624,0.0108127,0.031532,0
-búsqueda por rango (1% de los IDs),milisegundos por consulta,aleatorio,Lista,5000,10,0.149997,0.0385915,0.138086,1
-búsqueda por rango (1% de los IDs),milisegundos por consulta,aleatorio,Lista,10000,10,0.313617,0.0523317,0.298091,1
-búsqueda por rango (1% de los IDs),milisegundos por consulta,aleatorio,Lista,20000,10,0.581843,0.0310762,0.569317,1
-búsqueda por rango (1% de los IDs),milisegundos por consulta,ordenado,ABB,100,10,0.0017336,0.00058521,0.00153,1
-búsqueda por rango (1% de los IDs),milisegundos por consulta,ordenado,ABB,500,10,0.0079604,0.00185522,0.007407,1
-búsqueda por rango (1% de los IDs),milisegundos por consulta,ordenado,ABB,1000,10,0.0163177,0.00272326,0.015654,2
-búsqueda por rango (1% de los IDs),milisegundos por consulta,ordenado,ABB,5000,10,0.0839895,0.00741631,0.0831835,3
-búsqueda por rango (1% de los IDs),milisegundos por consulta,ordenado,ABB,10000,10,0.191497,0.0138521,0.192726,0
-búsqueda por rango (1% de los IDs),milisegundos por consulta,ordenado,ABB,20000,10,0.513163,0.125996,0.464357,0
-búsqueda por rango (1% de los IDs),milisegundos por consulta,ordenado,B+,100,10,0.0011901,0.000618321,0.000917,2
-búsqueda por rango (1% de los IDs),milisegundos por consulta,ordenado,B+,500,10,0.001362,0.000124487,0.001327,1
-búsqueda por rango (1% de los IDs),milisegundos por consulta,ordenado,B+,1000,10,0.0021874,0.000468991,0.002032,1
-búsqueda por rango (1% de los IDs),milisegundos por consulta,ordenado,B+,5000,10,0.0044508,0.000709663,0.004266,0
-búsqueda por rango (1% de los IDs),milisegundos por consulta,ordenado,B+,10000,10,0.007787,0.0011622,0.0074845,1
-búsqueda por rango (1% de los IDs),milisegundos por consulta,ordenado,B+,20000,10,0.0194062,0.00470098,0.019524,0
-búsqueda por rango (1% de los IDs),milisegundos por consulta,ordenado,Lista,100,10,0.0029886,0.00153303,0.002497,2
-búsqueda por rango (1% de los IDs),milisegundos por consulta,ordenado,Lista,500,10,0.0134605,0.00365945,0.0119,2
-búsqueda por rango (1% de los IDs),milisegundos por consulta,ordenado,Lista,1000,10,0.0237845,0.0022281,0.0227395,1
-búsqueda por rango (1% de los IDs),milisegundos por consulta,ordenado,Lista,5000,10,0.123585,0.00845795,0.119123,0
-búsqueda por rango (1% de los IDs),milisegundos por consulta,ordenado,Lista,10000,10,0.264277,0.0113026,0.266245,0
-búsqueda por rango (1% de los IDs),milisegundos por consulta,ordenado,Lista,20000,10,0.687683,0.199689,0.590158,0
-búsqueda por rango (10% de los IDs),milisegundos por consulta,aleatorio,ABB,100,10,0.0024909,0.000949742,0.0021495,1
-búsqueda por rango (10% de los IDs),milisegundos por consulta,aleatorio,ABB,500,10,0.0077258,0.00201548,0.0072925,0
-búsqueda por rango (10% de los IDs),milisegundos por consulta,aleatorio,ABB,1000,10,0.0131257,0.00232606,0.0121955,2
-búsqueda por rango (10% de los IDs),milisegundos por consulta,aleatorio,ABB,5000,10,0.0721751,0.0186581,0.061153,0
-búsqueda por rango (10% de los IDs),milisegundos por consulta,aleatorio,ABB,10000,10,0.132258,0.00773634,0.130708,0
-búsqueda por rango (10% de los IDs),milisegundos por consulta,aleatorio,ABB,20000,10,0.290294,0.0208634,0.283169,0
-búsqueda por rango (10% de los IDs),milisegundos por consulta,aleatorio,B+,100,10,0.0021803,0.000557833,0.002126,1
-búsqueda por rango (10% de los IDs),milisegundos por consulta,aleatorio,B+,500,10,0.0042732,0.000981501,0.0039165,1
-búsqueda por rango (10% de los IDs),milisegundos por consulta,aleatorio,B+,1000,10,0.0083311,0.00252803,0.007231,1
-búsqueda por rango (10% de los IDs),milisegundos por consulta,aleatorio,B+,5000,10,0.0357995,0.0206828,0.02759,1
-búsqueda por rango (10% de los IDs),milisegundos por consulta,aleatorio,B+,10000,10,0.0591459,0.00375855,0.058114,1
-búsqueda por rango (10% de los IDs),milisegundos por consulta,aleatorio,B+,20000,10,0.139247,0.0247041,0.127041,2
-búsqueda por rango (10% de los IDs),milisegundos por consulta,aleatorio,Lista,100,10,0.0058624,0.00200244,0.005392,0
-búsqueda por rango (10% de los IDs),milisegundos por consulta,aleatorio,Lista,500,10,0.0234511,0.00442869,0.022022,0
-búsqueda por rango (10% de los IDs),milisegundos por consulta,aleatorio,Lista,1000,10,0.0504023,0.0164334,0.042781,0
-búsqueda por rango (10% de los IDs),milisegundos por consulta,aleatorio,Lista,5000,10,0.246386,0.0586503,0.225749,2
-búsqueda por rango (10% de los IDs),milisegundos por consulta,aleatorio,Lista,10000,10,0.467481,0.0568831,0.450073,2
-búsqueda por rango (10% de los IDs),milisegundos por consulta,aleatorio,Lista,20000,10,0.962774,0.03049,0.958809,0
-búsqueda por rango (10% de los IDs),milisegundos por consulta,ordenado,ABB,100,10,0.0033608,0.00239571,0.002459,2
-búsqueda por rango (10% de los IDs),milisegundos por consulta,ordenado,ABB,500,10,0.012296,0.00248983,0.0112825,2
-búsqueda por rango (10% de los IDs),milisegundos por consulta,ordenado,ABB,1000,10,0.0273972,0.00821753,0.0245675,2
-búsqueda por rango (10% de los IDs),milisegundos por consulta,ordenado,ABB,5000,10,0.131505,0.0132449,0.13263,0
-búsqueda por rango (10% de los IDs),milisegundos por consulta,ordenado,ABB,10000,10,0.295541,0.0385009,0.282536,2
-búsqueda por rango (10% de los IDs),milisegundos por consulta,ordenado,ABB,20000,10,0.66931,0.121078,0.641463,1
-búsqueda por rango (10% de los IDs),milisegundos por consulta,ordenado,B+,100,10,0.0019405,0.000700136,0.0017315,0
-búsqueda por rango (10% de los IDs),milisegundos por consulta,ordenado,B+,500,10,0.0035908,0.000200342,0.0035755,0
-búsqueda por rango (10% de los IDs),milisegundos por consulta,ordenado,B+,1000,10,0.0069816,0.000819393,0.006657,1
-búsqueda por rango (10% de los IDs),milisegundos por consulta,ordenado,B+,5000,10,0.0289074,0.00370441,0.027622,2
-búsqueda por rango (10% de los IDs),milisegundos por consulta,ordenado,B+,10000,10,0.0546956,0.00175865,0.0538555,0
-búsqueda por rango (10% de los IDs),milisegundos por consulta,ordenado,B+,20000,10,0.145299,0.0426016,0.121345,1
-búsqueda por rango (10% de los IDs),milisegundos por consulta,ordenado,Lista,100,10,0.002851,0.000151955,0.002778,0
-búsqueda por rango (10% de los IDs),milisegundos por consulta,ordenado,Lista,500,10,0.0176344,0.00696213,0.0133295,0
-búsqueda por rango (10% de los IDs),milisegundos por consulta,ordenado,Lista,1000,10,0.0269667,0.00446989,0.024842,2
-búsqueda por rango (10% de los IDs),milisegundos por consulta,ordenado,Lista,5000,10,0.135217,0.00461073,0.136059,0
-búsqueda por rango (10% de los IDs),milisegundos por consulta,ordenado,Lista,10000,10,0.297549,0.0464582,0.281206,1
-búsqueda por rango (10% de los IDs),milisegundos por consulta,ordenado,Lista,20000,10,0.775628,0.180731,0.716952,0
-búsqueda por rango (50% de los IDs),milisegundos por consulta,aleatorio,ABB,100,10,0.0078866,0.00116891,0.0079715,3
-búsqueda por rango (50% de los IDs),milisegundos por consulta,aleatorio,ABB,500,10,0.0327484,0.00526834,0.0330455,0
-búsqueda por rango (50% de los IDs),milisegundos por consulta,aleatorio,ABB,1000,10,0.0704946,0.0174982,0.068762,1
-búsqueda por rango (50% de los IDs),milisegundos por consulta,aleatorio,ABB,5000,10,0.360675,0.0955426,0.31824,2
-búsqueda por rango (50% de los IDs),milisegundos por consulta,aleatorio,ABB,10000,10,0.651184,0.0344992,0.644386,1
-búsqueda por rango (50% de los IDs),milisegundos por consulta,aleatorio,ABB,20000,10,1.32123,0.0399867,1.31658,2
-búsqueda por rango (50% de los IDs),milisegundos por consulta,aleatorio,B+,100,10,0.0051478,0.000906348,0.0049825,0
-búsqueda por rango (50% de los IDs),milisegundos por consulta,aleatorio,B+,500,10,0.0206966,0.00855337,0.0175195,1
-búsqueda por rango (50% de los IDs),milisegundos por consulta,aleatorio,B+,1000,10,0.0326666,0.00759773,0.0321375,0
-búsqueda por rango (50% de los IDs),milisegundos por consulta,aleatorio,B+,5000,10,0.181404,0.0866096,0.139966,2
-búsqueda por rango (50% de los IDs),milisegundos por consulta,aleatorio,B+,10000,10,0.292094,0.0135352,0.294949,0
-búsqueda por rango (50% de los IDs),milisegundos por consulta,aleatorio,B+,20000,10,0.602125,0.0226459,0.598258,1
-búsqueda por rango (50% de los IDs),milisegundos por consulta,aleatorio,Lista,100,10,0.0093815,0.00227653,0.0087315,1
-búsqueda por rango (50% de los IDs),milisegundos por consulta,aleatorio,Lista,500,10,0.0531756,0.00878701,0.0520055,0
-búsqueda por rango (50% de los IDs),milisegundos por consulta,aleatorio,Lista,1000,10,0.120914,0.047031,0.102352,1
-búsqueda por rango (50% de los IDs),milisegundos por consulta,aleatorio,Lista,5000,10,0.633025,0.153834,0.574948,1
-búsqueda por rango (50% de los IDs),milisegundos por consulta,aleatorio,Lista,10000,10,1.28368,0.0980444,1.24378,1
-búsqueda por rango (50% de los IDs),milisegundos por consulta,aleatorio,Lista,20000,10,2.71122,0.0365696,2.71368,0
-búsqueda por rango (50% de los IDs),milisegundos por consulta,ordenado,ABB,100,10,0.0057052,0.000308124,0.005715,0
-búsqueda por rango (50% de los IDs),milisegundos por consulta,ordenado,ABB,500,10,0.0316423,0.00509078,0.0297555,2
-búsqueda por rango (50% de los IDs),milisegundos por consulta,ordenado,ABB,1000,10,0.0676786,0.0150447,0.062988,1
-búsqueda por rango (50% de los IDs),milisegundos por consulta,ordenado,ABB,5000,10,0.321741,0.0267899,0.310844,1
-búsqueda por rango (50% de los IDs),milisegundos por consulta,ordenado,ABB,10000,10,0.658681,0.048567,0.640147,1
-búsqueda por rango (50% de los IDs),milisegundos por consulta,ordenado,ABB,20000,10,1.55759,0.316654,1.39616,0
-búsqueda por rango (50% de los IDs),milisegundos por consulta,ordenado,B+,100,10,0.0038651,0.00169602,0.0030925,2
-búsqueda por rango (50% de los IDs),milisegundos por consulta,ordenado,B+,500,10,0.0159523,0.00255526,0.0154835,0
-búsqueda por rango (50% de los IDs),milisegundos por consulta,ordenado,B+,1000,10,0.0280074,0.00176616,0.027972,0
-búsqueda por rango (50% de los IDs),milisegundos por consulta,ordenado,B+,5000,10,0.135752,0.00815468,0.132694,0
-búsqueda por rango (50% de los IDs),milisegundos por consulta,ordenado,B+,10000,10,0.271133,0.0218889,0.262792,1
-búsqueda por rango (50% de los IDs),milisegundos por consulta,ordenado,B+,20000,10,0.727597,0.188731,0.686099,0
-búsqueda por rango (50% de los IDs),milisegundos por consulta,ordenado,Lista,100,10,0.0043255,0.00164992,0.003695,2
-búsqueda por rango (50% de los IDs),milisegundos por consulta,ordenado,Lista,500,10,0.0238727,0.0111136,0.020867,1
-búsqueda por rango (50% de los IDs),milisegundos por consulta,ordenado,Lista,1000,10,0.0375951,0.00303408,0.037442,0
-búsqueda por rango (50% de los IDs),milisegundos por consulta,ordenado,Lista,5000,10,0.193875,0.0152608,0.191706,0
-búsqueda por rango (50% de los IDs),milisegundos por consulta,ordenado,Lista,10000,10,0.419936,0.0899567,0.395704,1
-búsqueda por rango (50% de los IDs),milisegundos por consulta,ordenado,Lista,20000,10,1.17495,0.361928,1.00636,0
+búsqueda por ID,segundos (total de las M búsquedas),aleatorio,ABB,100,10,0.00045801,0.000136225,0.00040895,2
+búsqueda por ID,segundos (total de las M búsquedas),aleatorio,ABB,500,10,0.00064255,0.000202442,0.0005647,0
+búsqueda por ID,segundos (total de las M búsquedas),aleatorio,ABB,1000,10,0.00069093,0.000217004,0.0005748,0
+búsqueda por ID,segundos (total de las M búsquedas),aleatorio,ABB,5000,10,0.000947,0.000369008,0.00074595,1
+búsqueda por ID,segundos (total de las M búsquedas),aleatorio,ABB,10000,10,0.00091028,0.000143574,0.0008663,1
+búsqueda por ID,segundos (total de las M búsquedas),aleatorio,ABB,20000,10,0.00099053,4.37129e-05,0.00098235,0
+búsqueda por ID,segundos (total de las M búsquedas),aleatorio,B+,100,10,0.00135933,0.0005681,0.0013023,1
+búsqueda por ID,segundos (total de las M búsquedas),aleatorio,B+,500,10,0.00124774,0.000352801,0.00111115,0
+búsqueda por ID,segundos (total de las M búsquedas),aleatorio,B+,1000,10,0.00154735,0.000316118,0.00147615,1
+búsqueda por ID,segundos (total de las M búsquedas),aleatorio,B+,5000,10,0.00194897,0.000920284,0.0016218,2
+búsqueda por ID,segundos (total de las M búsquedas),aleatorio,B+,10000,10,0.00191664,0.000285862,0.0017802,0
+búsqueda por ID,segundos (total de las M búsquedas),aleatorio,B+,20000,10,0.00217632,0.000505396,0.0020603,1
+búsqueda por ID,segundos (total de las M búsquedas),aleatorio,Lista,100,10,0.00257948,0.000723015,0.00242225,0
+búsqueda por ID,segundos (total de las M búsquedas),aleatorio,Lista,500,10,0.00932394,0.00204799,0.00865485,1
+búsqueda por ID,segundos (total de las M búsquedas),aleatorio,Lista,1000,10,0.0211027,0.00464984,0.0201245,1
+búsqueda por ID,segundos (total de las M búsquedas),aleatorio,Lista,5000,10,0.0878999,0.0255208,0.0781838,2
+búsqueda por ID,segundos (total de las M búsquedas),aleatorio,Lista,10000,10,0.155616,0.0128079,0.151324,3
+búsqueda por ID,segundos (total de las M búsquedas),aleatorio,Lista,20000,10,0.316172,0.0125164,0.311682,1
+búsqueda por ID,segundos (total de las M búsquedas),ordenado,ABB,100,10,0.0020613,0.000889643,0.00162895,1
+búsqueda por ID,segundos (total de las M búsquedas),ordenado,ABB,500,10,0.00939396,0.00320666,0.0083937,1
+búsqueda por ID,segundos (total de las M búsquedas),ordenado,ABB,1000,10,0.0180356,0.00241456,0.0169524,2
+búsqueda por ID,segundos (total de las M búsquedas),ordenado,ABB,5000,10,0.0899389,0.00381189,0.0897143,1
+búsqueda por ID,segundos (total de las M búsquedas),ordenado,ABB,10000,10,0.192518,0.00497914,0.193283,0
+búsqueda por ID,segundos (total de las M búsquedas),ordenado,ABB,20000,10,0.504815,0.088984,0.488628,1
+búsqueda por ID,segundos (total de las M búsquedas),ordenado,B+,100,10,0.00098474,0.000439947,0.0007721,2
+búsqueda por ID,segundos (total de las M búsquedas),ordenado,B+,500,10,0.00100816,0.00011566,0.00096925,1
+búsqueda por ID,segundos (total de las M búsquedas),ordenado,B+,1000,10,0.00145054,0.000178984,0.0013898,2
+búsqueda por ID,segundos (total de las M búsquedas),ordenado,B+,5000,10,0.00149543,0.000248935,0.0013883,1
+búsqueda por ID,segundos (total de las M búsquedas),ordenado,B+,10000,10,0.00166093,8.6606e-05,0.00165775,0
+búsqueda por ID,segundos (total de las M búsquedas),ordenado,B+,20000,10,0.00256068,0.000868582,0.00201125,0
+búsqueda por ID,segundos (total de las M búsquedas),ordenado,Lista,100,10,0.00144289,0.00032956,0.0013423,1
+búsqueda por ID,segundos (total de las M búsquedas),ordenado,Lista,500,10,0.00735665,0.00107973,0.00710295,0
+búsqueda por ID,segundos (total de las M búsquedas),ordenado,Lista,1000,10,0.0152305,0.00166086,0.0151987,0
+búsqueda por ID,segundos (total de las M búsquedas),ordenado,Lista,5000,10,0.0691927,0.00289528,0.0687489,0
+búsqueda por ID,segundos (total de las M búsquedas),ordenado,Lista,10000,10,0.146425,0.00435724,0.146112,0
+búsqueda por ID,segundos (total de las M búsquedas),ordenado,Lista,20000,10,0.379184,0.0692749,0.344363,0
+inserción de N estudiantes,segundos (total),aleatorio,ABB,100,10,6.558e-05,2.80545e-05,5.4e-05,0
+inserción de N estudiantes,segundos (total),aleatorio,ABB,500,10,0.00029902,7.44029e-05,0.00027375,0
+inserción de N estudiantes,segundos (total),aleatorio,ABB,1000,10,0.0007657,0.000216047,0.0007509,0
+inserción de N estudiantes,segundos (total),aleatorio,ABB,5000,10,0.0043382,0.00118516,0.00358515,0
+inserción de N estudiantes,segundos (total),aleatorio,ABB,10000,10,0.00836968,0.000868584,0.0079521,0
+inserción de N estudiantes,segundos (total),aleatorio,ABB,20000,10,0.0179966,0.000547507,0.0177682,0
+inserción de N estudiantes,segundos (total),aleatorio,B+,100,10,0.0002104,0.000107133,0.0001837,1
+inserción de N estudiantes,segundos (total),aleatorio,B+,500,10,0.00070972,0.000141866,0.00066245,2
+inserción de N estudiantes,segundos (total),aleatorio,B+,1000,10,0.00186809,0.000418439,0.0018611,1
+inserción de N estudiantes,segundos (total),aleatorio,B+,5000,10,0.0121289,0.00416189,0.0107065,1
+inserción de N estudiantes,segundos (total),aleatorio,B+,10000,10,0.0213039,0.000545026,0.0213262,0
+inserción de N estudiantes,segundos (total),aleatorio,B+,20000,10,0.0470713,0.00168441,0.0469109,1
+inserción de N estudiantes,segundos (total),aleatorio,Lista,100,10,0.00024998,8.61862e-05,0.0002359,0
+inserción de N estudiantes,segundos (total),aleatorio,Lista,500,10,0.00351781,0.00066232,0.00314615,0
+inserción de N estudiantes,segundos (total),aleatorio,Lista,1000,10,0.0161226,0.00276996,0.0150802,0
+inserción de N estudiantes,segundos (total),aleatorio,Lista,5000,10,0.36477,0.0646428,0.341044,1
+inserción de N estudiantes,segundos (total),aleatorio,Lista,10000,10,1.23993,0.0197009,1.23621,1
+inserción de N estudiantes,segundos (total),aleatorio,Lista,20000,10,5.10002,0.139122,5.08145,0
+inserción de N estudiantes,segundos (total),ordenado,ABB,100,10,0.00024263,0.000108418,0.0001844,1
+inserción de N estudiantes,segundos (total),ordenado,ABB,500,10,0.00621278,0.00380142,0.00526505,1
+inserción de N estudiantes,segundos (total),ordenado,ABB,1000,10,0.0192368,0.00125884,0.0188826,1
+inserción de N estudiantes,segundos (total),ordenado,ABB,5000,10,0.515066,0.00867824,0.515086,0
+inserción de N estudiantes,segundos (total),ordenado,ABB,10000,10,2.23116,0.0121506,2.23173,0
+inserción de N estudiantes,segundos (total),ordenado,ABB,20000,10,11.911,1.86098,11.4689,0
+inserción de N estudiantes,segundos (total),ordenado,B+,100,10,0.00020627,0.000120098,0.00016085,2
+inserción de N estudiantes,segundos (total),ordenado,B+,500,10,0.00119709,0.000158809,0.0011595,0
+inserción de N estudiantes,segundos (total),ordenado,B+,1000,10,0.00306254,0.000467302,0.00297735,1
+inserción de N estudiantes,segundos (total),ordenado,B+,5000,10,0.0188983,0.000672031,0.0188627,0
+inserción de N estudiantes,segundos (total),ordenado,B+,10000,10,0.0424626,0.00362147,0.0412033,1
+inserción de N estudiantes,segundos (total),ordenado,B+,20000,10,0.111986,0.0227336,0.111285,1
+inserción de N estudiantes,segundos (total),ordenado,Lista,100,10,0.00013043,2.60199e-05,0.00012095,1
+inserción de N estudiantes,segundos (total),ordenado,Lista,500,10,0.00287555,0.000309177,0.00285415,0
+inserción de N estudiantes,segundos (total),ordenado,Lista,1000,10,0.0128608,0.00294964,0.0118648,2
+inserción de N estudiantes,segundos (total),ordenado,Lista,5000,10,0.282306,0.00904747,0.281095,1
+inserción de N estudiantes,segundos (total),ordenado,Lista,10000,10,1.15776,0.035394,1.14585,2
+inserción de N estudiantes,segundos (total),ordenado,Lista,20000,10,5.9945,0.938751,5.70711,0
+listado ordenado de N estudiantes,segundos,aleatorio,ABB,100,10,1.935e-05,7.41354e-06,1.6e-05,1
+listado ordenado de N estudiantes,segundos,aleatorio,ABB,500,10,8.125e-05,2.99484e-05,8.635e-05,0
+listado ordenado de N estudiantes,segundos,aleatorio,ABB,1000,10,0.00014041,3.87355e-05,0.00012755,1
+listado ordenado de N estudiantes,segundos,aleatorio,ABB,5000,10,0.0004545,9.80166e-05,0.000424,0
+listado ordenado de N estudiantes,segundos,aleatorio,ABB,10000,10,0.0008867,9.84707e-05,0.0008461,0
+listado ordenado de N estudiantes,segundos,aleatorio,ABB,20000,10,0.00176252,0.000160849,0.0017141,0
+listado ordenado de N estudiantes,segundos,aleatorio,B+,100,10,1.217e-05,3.97438e-06,1.195e-05,0
+listado ordenado de N estudiantes,segundos,aleatorio,B+,500,10,5.078e-05,5.63293e-05,3.505e-05,1
+listado ordenado de N estudiantes,segundos,aleatorio,B+,1000,10,8.911e-05,4.43125e-05,7.46e-05,2
+listado ordenado de N estudiantes,segundos,aleatorio,B+,5000,10,0.00016227,8.18467e-05,0.00012565,1
+listado ordenado de N estudiantes,segundos,aleatorio,B+,10000,10,0.00022691,1.94084e-05,0.0002305,0
+listado ordenado de N estudiantes,segundos,aleatorio,B+,20000,10,0.00044569,3.51071e-05,0.00043085,1
+listado ordenado de N estudiantes,segundos,aleatorio,Lista,100,10,2.899e-05,2.22527e-05,2.535e-05,1
+listado ordenado de N estudiantes,segundos,aleatorio,Lista,500,10,8.07e-05,1.95701e-05,7.655e-05,1
+listado ordenado de N estudiantes,segundos,aleatorio,Lista,1000,10,0.0002049,8.66656e-05,0.0001717,0
+listado ordenado de N estudiantes,segundos,aleatorio,Lista,5000,10,0.00108938,0.000192124,0.0010741,0
+listado ordenado de N estudiantes,segundos,aleatorio,Lista,10000,10,0.0019047,6.77493e-05,0.0018835,1
+listado ordenado de N estudiantes,segundos,aleatorio,Lista,20000,10,0.00427542,0.000173796,0.00422175,2
+listado ordenado de N estudiantes,segundos,ordenado,ABB,100,10,1.462e-05,7.02579e-06,1.19e-05,0
+listado ordenado de N estudiantes,segundos,ordenado,ABB,500,10,7.479e-05,4.02749e-05,6.155e-05,2
+listado ordenado de N estudiantes,segundos,ordenado,ABB,1000,10,8.108e-05,1.32005e-05,7.66e-05,3
+listado ordenado de N estudiantes,segundos,ordenado,ABB,5000,10,0.00036198,7.17658e-05,0.0003357,2
+listado ordenado de N estudiantes,segundos,ordenado,ABB,10000,10,0.00067389,0.00011001,0.00063855,1
+listado ordenado de N estudiantes,segundos,ordenado,ABB,20000,10,0.00184059,0.000491927,0.0020238,0
+listado ordenado de N estudiantes,segundos,ordenado,B+,100,10,8.27e-06,3.34267e-06,6.94999e-06,2
+listado ordenado de N estudiantes,segundos,ordenado,B+,500,10,2.834e-05,1.14654e-05,2.87e-05,0
+listado ordenado de N estudiantes,segundos,ordenado,B+,1000,10,5.938e-05,1.52938e-05,5.98e-05,0
+listado ordenado de N estudiantes,segundos,ordenado,B+,5000,10,0.00010841,2.77347e-05,9.68e-05,2
+listado ordenado de N estudiantes,segundos,ordenado,B+,10000,10,0.00019266,1.55069e-05,0.00019245,0
+listado ordenado de N estudiantes,segundos,ordenado,B+,20000,10,0.00041105,9.9218e-05,0.0003626,1
+listado ordenado de N estudiantes,segundos,ordenado,Lista,100,10,5.24e-06,1.9489e-06,5.04999e-06,0
+listado ordenado de N estudiantes,segundos,ordenado,Lista,500,10,1.259e-05,3.38902e-06,1.265e-05,0
+listado ordenado de N estudiantes,segundos,ordenado,Lista,1000,10,2.193e-05,1.26736e-05,1.7e-05,1
+listado ordenado de N estudiantes,segundos,ordenado,Lista,5000,10,0.00010368,3.62439e-05,8.665e-05,1
+listado ordenado de N estudiantes,segundos,ordenado,Lista,10000,10,0.00027037,0.000127247,0.0002106,0
+listado ordenado de N estudiantes,segundos,ordenado,Lista,20000,10,0.00061407,0.000168768,0.00061935,1
+"búsqueda por rango (0,1% de los IDs)",segundos (total de las consultas de rango),aleatorio,ABB,100,10,7.689e-05,2.49493e-05,6.835e-05,0
+"búsqueda por rango (0,1% de los IDs)",segundos (total de las consultas de rango),aleatorio,ABB,500,10,0.00012021,5.39446e-05,9.72e-05,0
+"búsqueda por rango (0,1% de los IDs)",segundos (total de las consultas de rango),aleatorio,ABB,1000,10,0.00011201,2.9841e-05,0.00010335,0
+"búsqueda por rango (0,1% de los IDs)",segundos (total de las consultas de rango),aleatorio,ABB,5000,10,0.00023362,8.61284e-05,0.00018005,0
+"búsqueda por rango (0,1% de los IDs)",segundos (total de las consultas de rango),aleatorio,ABB,10000,10,0.00026721,1.99005e-05,0.00026825,0
+"búsqueda por rango (0,1% de los IDs)",segundos (total de las consultas de rango),aleatorio,ABB,20000,10,0.00043076,3.26963e-05,0.00042475,0
+"búsqueda por rango (0,1% de los IDs)",segundos (total de las consultas de rango),aleatorio,B+,100,10,0.00015531,4.25559e-05,0.0001486,0
+"búsqueda por rango (0,1% de los IDs)",segundos (total de las consultas de rango),aleatorio,B+,500,10,0.00014933,4.25655e-05,0.0001325,0
+"búsqueda por rango (0,1% de los IDs)",segundos (total de las consultas de rango),aleatorio,B+,1000,10,0.00017984,7.52405e-05,0.0001517,1
+"búsqueda por rango (0,1% de los IDs)",segundos (total de las consultas de rango),aleatorio,B+,5000,10,0.00026164,0.000134023,0.0002124,2
+"búsqueda por rango (0,1% de los IDs)",segundos (total de las consultas de rango),aleatorio,B+,10000,10,0.00026242,1.30819e-05,0.0002661,0
+"búsqueda por rango (0,1% de los IDs)",segundos (total de las consultas de rango),aleatorio,B+,20000,10,0.00033717,6.8657e-06,0.0003382,0
+"búsqueda por rango (0,1% de los IDs)",segundos (total de las consultas de rango),aleatorio,Lista,100,10,0.00045189,0.000175412,0.0004016,2
+"búsqueda por rango (0,1% de los IDs)",segundos (total de las consultas de rango),aleatorio,Lista,500,10,0.00176599,0.000432717,0.0016322,1
+"búsqueda por rango (0,1% de los IDs)",segundos (total de las consultas de rango),aleatorio,Lista,1000,10,0.00297342,0.000522215,0.0027351,1
+"búsqueda por rango (0,1% de los IDs)",segundos (total de las consultas de rango),aleatorio,Lista,5000,10,0.0149341,0.00381811,0.013537,2
+"búsqueda por rango (0,1% de los IDs)",segundos (total de las consultas de rango),aleatorio,Lista,10000,10,0.0284677,0.00336223,0.0274445,1
+"búsqueda por rango (0,1% de los IDs)",segundos (total de las consultas de rango),aleatorio,Lista,20000,10,0.0551869,0.00229207,0.0543909,0
+"búsqueda por rango (0,1% de los IDs)",segundos (total de las consultas de rango),ordenado,ABB,100,10,0.00021541,0.000106559,0.00016465,0
+"búsqueda por rango (0,1% de los IDs)",segundos (total de las consultas de rango),ordenado,ABB,500,10,0.00076884,0.000143366,0.00072725,1
+"búsqueda por rango (0,1% de los IDs)",segundos (total de las consultas de rango),ordenado,ABB,1000,10,0.00156437,0.000201804,0.00155245,0
+"búsqueda por rango (0,1% de los IDs)",segundos (total de las consultas de rango),ordenado,ABB,5000,10,0.00811985,0.00103037,0.00784475,1
+"búsqueda por rango (0,1% de los IDs)",segundos (total de las consultas de rango),ordenado,ABB,10000,10,0.0181311,0.00181516,0.017678,0
+"búsqueda por rango (0,1% de los IDs)",segundos (total de las consultas de rango),ordenado,ABB,20000,10,0.0516314,0.0141921,0.047445,0
+"búsqueda por rango (0,1% de los IDs)",segundos (total de las consultas de rango),ordenado,B+,100,10,0.00011576,4.11244e-05,9.075e-05,0
+"búsqueda por rango (0,1% de los IDs)",segundos (total de las consultas de rango),ordenado,B+,500,10,0.00011574,1.74015e-05,0.000111,1
+"búsqueda por rango (0,1% de los IDs)",segundos (total de las consultas de rango),ordenado,B+,1000,10,0.00017096,2.27737e-05,0.0001652,1
+"búsqueda por rango (0,1% de los IDs)",segundos (total de las consultas de rango),ordenado,B+,5000,10,0.0002126,5.7993e-05,0.00018615,1
+"búsqueda por rango (0,1% de los IDs)",segundos (total de las consultas de rango),ordenado,B+,10000,10,0.00024805,2.26548e-05,0.00023905,0
+"búsqueda por rango (0,1% de los IDs)",segundos (total de las consultas de rango),ordenado,B+,20000,10,0.00040103,0.000118378,0.00033915,0
+"búsqueda por rango (0,1% de los IDs)",segundos (total de las consultas de rango),ordenado,Lista,100,10,0.00037919,0.000231543,0.0002721,2
+"búsqueda por rango (0,1% de los IDs)",segundos (total de las consultas de rango),ordenado,Lista,500,10,0.00145076,0.000544323,0.0012105,1
+"búsqueda por rango (0,1% de los IDs)",segundos (total de las consultas de rango),ordenado,Lista,1000,10,0.00259523,0.000598172,0.00239205,2
+"búsqueda por rango (0,1% de los IDs)",segundos (total de las consultas de rango),ordenado,Lista,5000,10,0.0124311,0.000901783,0.0121643,2
+"búsqueda por rango (0,1% de los IDs)",segundos (total de las consultas de rango),ordenado,Lista,10000,10,0.0259195,0.00068819,0.0261213,0
+"búsqueda por rango (0,1% de los IDs)",segundos (total de las consultas de rango),ordenado,Lista,20000,10,0.0763287,0.0193045,0.0729802,0
+búsqueda por rango (1% de los IDs),segundos (total de las consultas de rango),aleatorio,ABB,100,10,8.459e-05,1.34901e-05,8.46e-05,0
+búsqueda por rango (1% de los IDs),segundos (total de las consultas de rango),aleatorio,ABB,500,10,0.00015469,5.03642e-05,0.00014235,1
+búsqueda por rango (1% de los IDs),segundos (total de las consultas de rango),aleatorio,ABB,1000,10,0.00022851,6.04856e-05,0.00020205,1
+búsqueda por rango (1% de los IDs),segundos (total de las consultas de rango),aleatorio,ABB,5000,10,0.00093153,0.000255821,0.00087265,0
+búsqueda por rango (1% de los IDs),segundos (total de las consultas de rango),aleatorio,ABB,10000,10,0.0014952,0.00014838,0.0014911,0
+búsqueda por rango (1% de los IDs),segundos (total de las consultas de rango),aleatorio,ABB,20000,10,0.00313455,0.000351268,0.0030617,2
+búsqueda por rango (1% de los IDs),segundos (total de las consultas de rango),aleatorio,B+,100,10,0.00015616,5.68978e-05,0.0001466,2
+búsqueda por rango (1% de los IDs),segundos (total de las consultas de rango),aleatorio,B+,500,10,0.00015919,4.41216e-05,0.0001462,1
+búsqueda por rango (1% de los IDs),segundos (total de las consultas de rango),aleatorio,B+,1000,10,0.00025332,8.08738e-05,0.00022365,2
+búsqueda por rango (1% de los IDs),segundos (total de las consultas de rango),aleatorio,B+,5000,10,0.00065752,0.000514209,0.0004442,2
+búsqueda por rango (1% de los IDs),segundos (total de las consultas de rango),aleatorio,B+,10000,10,0.00077008,1.86513e-05,0.0007698,0
+búsqueda por rango (1% de los IDs),segundos (total de las consultas de rango),aleatorio,B+,20000,10,0.00153126,0.00023045,0.0014212,2
+búsqueda por rango (1% de los IDs),segundos (total de las consultas de rango),aleatorio,Lista,100,10,0.00051598,0.000306264,0.0004218,2
+búsqueda por rango (1% de los IDs),segundos (total de las consultas de rango),aleatorio,Lista,500,10,0.00173414,0.000325166,0.001656,0
+búsqueda por rango (1% de los IDs),segundos (total de las consultas de rango),aleatorio,Lista,1000,10,0.00356624,0.00108127,0.0031532,0
+búsqueda por rango (1% de los IDs),segundos (total de las consultas de rango),aleatorio,Lista,5000,10,0.0149997,0.00385915,0.0138086,1
+búsqueda por rango (1% de los IDs),segundos (total de las consultas de rango),aleatorio,Lista,10000,10,0.0313617,0.00523317,0.0298091,1
+búsqueda por rango (1% de los IDs),segundos (total de las consultas de rango),aleatorio,Lista,20000,10,0.0581843,0.00310762,0.0569317,1
+búsqueda por rango (1% de los IDs),segundos (total de las consultas de rango),ordenado,ABB,100,10,0.00017336,5.8521e-05,0.000153,1
+búsqueda por rango (1% de los IDs),segundos (total de las consultas de rango),ordenado,ABB,500,10,0.00079604,0.000185522,0.0007407,1
+búsqueda por rango (1% de los IDs),segundos (total de las consultas de rango),ordenado,ABB,1000,10,0.00163177,0.000272326,0.0015654,2
+búsqueda por rango (1% de los IDs),segundos (total de las consultas de rango),ordenado,ABB,5000,10,0.00839895,0.000741631,0.00831835,3
+búsqueda por rango (1% de los IDs),segundos (total de las consultas de rango),ordenado,ABB,10000,10,0.0191497,0.00138521,0.0192726,0
+búsqueda por rango (1% de los IDs),segundos (total de las consultas de rango),ordenado,ABB,20000,10,0.0513163,0.0125996,0.0464357,0
+búsqueda por rango (1% de los IDs),segundos (total de las consultas de rango),ordenado,B+,100,10,0.00011901,6.18321e-05,9.17e-05,2
+búsqueda por rango (1% de los IDs),segundos (total de las consultas de rango),ordenado,B+,500,10,0.0001362,1.24487e-05,0.0001327,1
+búsqueda por rango (1% de los IDs),segundos (total de las consultas de rango),ordenado,B+,1000,10,0.00021874,4.68991e-05,0.0002032,1
+búsqueda por rango (1% de los IDs),segundos (total de las consultas de rango),ordenado,B+,5000,10,0.00044508,7.09663e-05,0.0004266,0
+búsqueda por rango (1% de los IDs),segundos (total de las consultas de rango),ordenado,B+,10000,10,0.0007787,0.00011622,0.00074845,1
+búsqueda por rango (1% de los IDs),segundos (total de las consultas de rango),ordenado,B+,20000,10,0.00194062,0.000470098,0.0019524,0
+búsqueda por rango (1% de los IDs),segundos (total de las consultas de rango),ordenado,Lista,100,10,0.00029886,0.000153303,0.0002497,2
+búsqueda por rango (1% de los IDs),segundos (total de las consultas de rango),ordenado,Lista,500,10,0.00134605,0.000365945,0.00119,2
+búsqueda por rango (1% de los IDs),segundos (total de las consultas de rango),ordenado,Lista,1000,10,0.00237845,0.00022281,0.00227395,1
+búsqueda por rango (1% de los IDs),segundos (total de las consultas de rango),ordenado,Lista,5000,10,0.0123585,0.000845795,0.0119123,0
+búsqueda por rango (1% de los IDs),segundos (total de las consultas de rango),ordenado,Lista,10000,10,0.0264277,0.00113026,0.0266245,0
+búsqueda por rango (1% de los IDs),segundos (total de las consultas de rango),ordenado,Lista,20000,10,0.0687683,0.0199689,0.0590158,0
+búsqueda por rango (10% de los IDs),segundos (total de las consultas de rango),aleatorio,ABB,100,10,0.00024909,9.49742e-05,0.00021495,1
+búsqueda por rango (10% de los IDs),segundos (total de las consultas de rango),aleatorio,ABB,500,10,0.00077258,0.000201548,0.00072925,0
+búsqueda por rango (10% de los IDs),segundos (total de las consultas de rango),aleatorio,ABB,1000,10,0.00131257,0.000232606,0.00121955,2
+búsqueda por rango (10% de los IDs),segundos (total de las consultas de rango),aleatorio,ABB,5000,10,0.00721751,0.00186581,0.0061153,0
+búsqueda por rango (10% de los IDs),segundos (total de las consultas de rango),aleatorio,ABB,10000,10,0.0132258,0.000773634,0.0130708,0
+búsqueda por rango (10% de los IDs),segundos (total de las consultas de rango),aleatorio,ABB,20000,10,0.0290294,0.00208634,0.0283169,0
+búsqueda por rango (10% de los IDs),segundos (total de las consultas de rango),aleatorio,B+,100,10,0.00021803,5.57833e-05,0.0002126,1
+búsqueda por rango (10% de los IDs),segundos (total de las consultas de rango),aleatorio,B+,500,10,0.00042732,9.81501e-05,0.00039165,1
+búsqueda por rango (10% de los IDs),segundos (total de las consultas de rango),aleatorio,B+,1000,10,0.00083311,0.000252803,0.0007231,1
+búsqueda por rango (10% de los IDs),segundos (total de las consultas de rango),aleatorio,B+,5000,10,0.00357995,0.00206828,0.002759,1
+búsqueda por rango (10% de los IDs),segundos (total de las consultas de rango),aleatorio,B+,10000,10,0.00591459,0.000375855,0.0058114,1
+búsqueda por rango (10% de los IDs),segundos (total de las consultas de rango),aleatorio,B+,20000,10,0.0139247,0.00247041,0.0127041,2
+búsqueda por rango (10% de los IDs),segundos (total de las consultas de rango),aleatorio,Lista,100,10,0.00058624,0.000200244,0.0005392,0
+búsqueda por rango (10% de los IDs),segundos (total de las consultas de rango),aleatorio,Lista,500,10,0.00234511,0.000442869,0.0022022,0
+búsqueda por rango (10% de los IDs),segundos (total de las consultas de rango),aleatorio,Lista,1000,10,0.00504023,0.00164334,0.0042781,0
+búsqueda por rango (10% de los IDs),segundos (total de las consultas de rango),aleatorio,Lista,5000,10,0.0246386,0.00586503,0.0225749,2
+búsqueda por rango (10% de los IDs),segundos (total de las consultas de rango),aleatorio,Lista,10000,10,0.0467481,0.00568831,0.0450073,2
+búsqueda por rango (10% de los IDs),segundos (total de las consultas de rango),aleatorio,Lista,20000,10,0.0962774,0.003049,0.0958809,0
+búsqueda por rango (10% de los IDs),segundos (total de las consultas de rango),ordenado,ABB,100,10,0.00033608,0.000239571,0.0002459,2
+búsqueda por rango (10% de los IDs),segundos (total de las consultas de rango),ordenado,ABB,500,10,0.0012296,0.000248983,0.00112825,2
+búsqueda por rango (10% de los IDs),segundos (total de las consultas de rango),ordenado,ABB,1000,10,0.00273972,0.000821753,0.00245675,2
+búsqueda por rango (10% de los IDs),segundos (total de las consultas de rango),ordenado,ABB,5000,10,0.0131505,0.00132449,0.013263,0
+búsqueda por rango (10% de los IDs),segundos (total de las consultas de rango),ordenado,ABB,10000,10,0.0295541,0.00385009,0.0282536,2
+búsqueda por rango (10% de los IDs),segundos (total de las consultas de rango),ordenado,ABB,20000,10,0.066931,0.0121078,0.0641463,1
+búsqueda por rango (10% de los IDs),segundos (total de las consultas de rango),ordenado,B+,100,10,0.00019405,7.00136e-05,0.00017315,0
+búsqueda por rango (10% de los IDs),segundos (total de las consultas de rango),ordenado,B+,500,10,0.00035908,2.00342e-05,0.00035755,0
+búsqueda por rango (10% de los IDs),segundos (total de las consultas de rango),ordenado,B+,1000,10,0.00069816,8.19393e-05,0.0006657,1
+búsqueda por rango (10% de los IDs),segundos (total de las consultas de rango),ordenado,B+,5000,10,0.00289074,0.000370441,0.0027622,2
+búsqueda por rango (10% de los IDs),segundos (total de las consultas de rango),ordenado,B+,10000,10,0.00546956,0.000175865,0.00538555,0
+búsqueda por rango (10% de los IDs),segundos (total de las consultas de rango),ordenado,B+,20000,10,0.0145299,0.00426016,0.0121345,1
+búsqueda por rango (10% de los IDs),segundos (total de las consultas de rango),ordenado,Lista,100,10,0.0002851,1.51955e-05,0.0002778,0
+búsqueda por rango (10% de los IDs),segundos (total de las consultas de rango),ordenado,Lista,500,10,0.00176344,0.000696213,0.00133295,0
+búsqueda por rango (10% de los IDs),segundos (total de las consultas de rango),ordenado,Lista,1000,10,0.00269667,0.000446989,0.0024842,2
+búsqueda por rango (10% de los IDs),segundos (total de las consultas de rango),ordenado,Lista,5000,10,0.0135217,0.000461073,0.0136059,0
+búsqueda por rango (10% de los IDs),segundos (total de las consultas de rango),ordenado,Lista,10000,10,0.0297549,0.00464582,0.0281206,1
+búsqueda por rango (10% de los IDs),segundos (total de las consultas de rango),ordenado,Lista,20000,10,0.0775628,0.0180731,0.0716952,0
+búsqueda por rango (50% de los IDs),segundos (total de las consultas de rango),aleatorio,ABB,100,10,0.00078866,0.000116891,0.00079715,3
+búsqueda por rango (50% de los IDs),segundos (total de las consultas de rango),aleatorio,ABB,500,10,0.00327484,0.000526834,0.00330455,0
+búsqueda por rango (50% de los IDs),segundos (total de las consultas de rango),aleatorio,ABB,1000,10,0.00704946,0.00174982,0.0068762,1
+búsqueda por rango (50% de los IDs),segundos (total de las consultas de rango),aleatorio,ABB,5000,10,0.0360675,0.00955426,0.031824,2
+búsqueda por rango (50% de los IDs),segundos (total de las consultas de rango),aleatorio,ABB,10000,10,0.0651184,0.00344992,0.0644386,1
+búsqueda por rango (50% de los IDs),segundos (total de las consultas de rango),aleatorio,ABB,20000,10,0.132123,0.00399867,0.131658,2
+búsqueda por rango (50% de los IDs),segundos (total de las consultas de rango),aleatorio,B+,100,10,0.00051478,9.06348e-05,0.00049825,0
+búsqueda por rango (50% de los IDs),segundos (total de las consultas de rango),aleatorio,B+,500,10,0.00206966,0.000855337,0.00175195,1
+búsqueda por rango (50% de los IDs),segundos (total de las consultas de rango),aleatorio,B+,1000,10,0.00326666,0.000759773,0.00321375,0
+búsqueda por rango (50% de los IDs),segundos (total de las consultas de rango),aleatorio,B+,5000,10,0.0181404,0.00866096,0.0139966,2
+búsqueda por rango (50% de los IDs),segundos (total de las consultas de rango),aleatorio,B+,10000,10,0.0292094,0.00135352,0.0294949,0
+búsqueda por rango (50% de los IDs),segundos (total de las consultas de rango),aleatorio,B+,20000,10,0.0602125,0.00226459,0.0598258,1
+búsqueda por rango (50% de los IDs),segundos (total de las consultas de rango),aleatorio,Lista,100,10,0.00093815,0.000227653,0.00087315,1
+búsqueda por rango (50% de los IDs),segundos (total de las consultas de rango),aleatorio,Lista,500,10,0.00531756,0.000878701,0.00520055,0
+búsqueda por rango (50% de los IDs),segundos (total de las consultas de rango),aleatorio,Lista,1000,10,0.0120914,0.0047031,0.0102352,1
+búsqueda por rango (50% de los IDs),segundos (total de las consultas de rango),aleatorio,Lista,5000,10,0.0633025,0.0153834,0.0574948,1
+búsqueda por rango (50% de los IDs),segundos (total de las consultas de rango),aleatorio,Lista,10000,10,0.128368,0.00980444,0.124378,1
+búsqueda por rango (50% de los IDs),segundos (total de las consultas de rango),aleatorio,Lista,20000,10,0.271122,0.00365696,0.271368,0
+búsqueda por rango (50% de los IDs),segundos (total de las consultas de rango),ordenado,ABB,100,10,0.00057052,3.08124e-05,0.0005715,0
+búsqueda por rango (50% de los IDs),segundos (total de las consultas de rango),ordenado,ABB,500,10,0.00316423,0.000509078,0.00297555,2
+búsqueda por rango (50% de los IDs),segundos (total de las consultas de rango),ordenado,ABB,1000,10,0.00676786,0.00150447,0.0062988,1
+búsqueda por rango (50% de los IDs),segundos (total de las consultas de rango),ordenado,ABB,5000,10,0.0321741,0.00267899,0.0310844,1
+búsqueda por rango (50% de los IDs),segundos (total de las consultas de rango),ordenado,ABB,10000,10,0.0658681,0.0048567,0.0640147,1
+búsqueda por rango (50% de los IDs),segundos (total de las consultas de rango),ordenado,ABB,20000,10,0.155759,0.0316654,0.139616,0
+búsqueda por rango (50% de los IDs),segundos (total de las consultas de rango),ordenado,B+,100,10,0.00038651,0.000169602,0.00030925,2
+búsqueda por rango (50% de los IDs),segundos (total de las consultas de rango),ordenado,B+,500,10,0.00159523,0.000255526,0.00154835,0
+búsqueda por rango (50% de los IDs),segundos (total de las consultas de rango),ordenado,B+,1000,10,0.00280074,0.000176616,0.0027972,0
+búsqueda por rango (50% de los IDs),segundos (total de las consultas de rango),ordenado,B+,5000,10,0.0135752,0.000815468,0.0132694,0
+búsqueda por rango (50% de los IDs),segundos (total de las consultas de rango),ordenado,B+,10000,10,0.0271133,0.00218889,0.0262792,1
+búsqueda por rango (50% de los IDs),segundos (total de las consultas de rango),ordenado,B+,20000,10,0.0727597,0.0188731,0.0686099,0
+búsqueda por rango (50% de los IDs),segundos (total de las consultas de rango),ordenado,Lista,100,10,0.00043255,0.000164992,0.0003695,2
+búsqueda por rango (50% de los IDs),segundos (total de las consultas de rango),ordenado,Lista,500,10,0.00238727,0.00111136,0.0020867,1
+búsqueda por rango (50% de los IDs),segundos (total de las consultas de rango),ordenado,Lista,1000,10,0.00375951,0.000303408,0.0037442,0
+búsqueda por rango (50% de los IDs),segundos (total de las consultas de rango),ordenado,Lista,5000,10,0.0193875,0.00152608,0.0191706,0
+búsqueda por rango (50% de los IDs),segundos (total de las consultas de rango),ordenado,Lista,10000,10,0.0419936,0.00899567,0.0395704,1
+búsqueda por rango (50% de los IDs),segundos (total de las consultas de rango),ordenado,Lista,20000,10,0.117495,0.0361928,0.100636,0
 altura del árbol,niveles,aleatorio,ABB,100,10,12.7,1.41814,12,1
 altura del árbol,niveles,aleatorio,ABB,500,10,19.1,1.79196,18,0
 altura del árbol,niveles,aleatorio,ABB,1000,10,21.7,2.54078,21,0
