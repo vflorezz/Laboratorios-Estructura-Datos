@@ -1,5 +1,5 @@
 """
-graficas.py  -  Laboratorio 3: Sistema de Busqueda
+graficas.py
 
 Lee resultados/resultados.csv (generado por experimentos.py), calcula las estadisticas
 (promedio y desviación estándar de las repeticiones) y genera:
@@ -206,16 +206,16 @@ for ax, orden in zip(axs, ["aleatorio", "ordenado"]):
 guardar(fig, "02_efecto_del_orden_busqueda.png", "Búsqueda por ID: IDs aleatorios (izquierda) vs. IDs ordenados (derecha)",
         PIE_BUSQUEDA + PIE_PEND)
 
-# 3. Altura vs N
-fig, ax = plt.subplots(figsize=(8, 5.5))
-for est, orden in [("ABB", "aleatorio"), ("ABB", "ordenado"), ("B+", "aleatorio"), ("B+", "ordenado")]:
-    curva(ax, serie(ST["altura"], est, orden), "N", est, orden, f"{NOMBRE_CORTO[est]}, IDs {orden}s")
-ax.plot(np.array(TAMANOS, dtype=float), np.log2(np.array(TAMANOS, dtype=float)), color="black", linestyle=":",
-        linewidth=1.3, label="Referencia: log2(N)")
-formato(ax, "Mismo color = misma estructura; línea punteada = IDs ordenados", "Cantidad de estudiantes N",
-        "Altura (número de niveles)")
-guardar(fig, "03_altura_vs_N.png", "Altura del árbol vs. N",
-        PIE_BASE + " Altura = número de niveles (solo la raíz = 1).")
+# 3. Altura vs N (dos paneles: IDs aleatorios y IDs ordenados)
+Ng = np.array(TAMANOS, dtype=float)
+fig, axs = plt.subplots(1, 2, figsize=(13, 5.5), sharey=True)
+for ax, orden in zip(axs, ["aleatorio", "ordenado"]):
+    for est in ["ABB", "B+"]:
+        curva(ax, serie(ST["altura"], est, orden), "N", est, orden, etq(ST["altura"], est, orden, NOMBRE_CORTO[est]))
+    ax.plot(Ng, np.log2(Ng), color="black", linestyle=":", linewidth=1.3, label="Referencia teórica: log2(N)")
+    formato(ax, f"IDs {orden}s", "Cantidad de estudiantes N", "Altura del árbol (número de niveles)")
+guardar(fig, "03_altura_vs_N.png", "Altura del árbol vs. N (IDs aleatorios a la izquierda, IDs ordenados a la derecha)",
+        PIE_BASE + " Altura = número de niveles (solo la raíz = 1)." + PIE_PEND)
 
 # 4. Insercion vs N
 fig, axs = plt.subplots(1, 2, figsize=(13, 5.5), sharey=True)
