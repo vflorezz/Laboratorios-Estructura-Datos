@@ -1,0 +1,43 @@
+﻿operacion,orden,estructura,pendiente_log_log
+búsqueda por ID,aleatorio,Lista,0.911
+búsqueda por ID,aleatorio,ABB,0.145
+búsqueda por ID,aleatorio,B+,0.102
+búsqueda por ID,ordenado,Lista,1.028
+búsqueda por ID,ordenado,ABB,1.022
+búsqueda por ID,ordenado,B+,0.16
+inserción de N estudiantes,aleatorio,Lista,1.891
+inserción de N estudiantes,aleatorio,ABB,1.071
+inserción de N estudiantes,aleatorio,B+,1.051
+inserción de N estudiantes,ordenado,Lista,2.008
+inserción de N estudiantes,ordenado,ABB,2.015
+inserción de N estudiantes,ordenado,B+,1.182
+listado ordenado de N estudiantes,aleatorio,Lista,0.967
+listado ordenado de N estudiantes,aleatorio,ABB,0.83
+listado ordenado de N estudiantes,aleatorio,B+,0.623
+listado ordenado de N estudiantes,ordenado,Lista,0.916
+listado ordenado de N estudiantes,ordenado,ABB,0.867
+listado ordenado de N estudiantes,ordenado,B+,0.69
+"búsqueda por rango (0,1% de los IDs)",aleatorio,Lista,0.915
+"búsqueda por rango (0,1% de los IDs)",aleatorio,ABB,0.314
+"búsqueda por rango (0,1% de los IDs)",aleatorio,B+,0.156
+"búsqueda por rango (0,1% de los IDs)",ordenado,Lista,0.98
+"búsqueda por rango (0,1% de los IDs)",ordenado,ABB,1.026
+"búsqueda por rango (0,1% de los IDs)",ordenado,B+,0.224
+búsqueda por rango (1% de los IDs),aleatorio,Lista,0.905
+búsqueda por rango (1% de los IDs),aleatorio,ABB,0.699
+búsqueda por rango (1% de los IDs),aleatorio,B+,0.449
+búsqueda por rango (1% de los IDs),ordenado,Lista,1.012
+búsqueda por rango (1% de los IDs),ordenado,ABB,1.06
+búsqueda por rango (1% de los IDs),ordenado,B+,0.514
+búsqueda por rango (10% de los IDs),aleatorio,Lista,0.97
+búsqueda por rango (10% de los IDs),aleatorio,ABB,0.912
+búsqueda por rango (10% de los IDs),aleatorio,B+,0.801
+búsqueda por rango (10% de los IDs),ordenado,Lista,1.024
+búsqueda por rango (10% de los IDs),ordenado,ABB,1.005
+búsqueda por rango (10% de los IDs),ordenado,B+,0.823
+búsqueda por rango (50% de los IDs),aleatorio,Lista,1.066
+búsqueda por rango (50% de los IDs),aleatorio,ABB,0.975
+búsqueda por rango (50% de los IDs),aleatorio,B+,0.904
+búsqueda por rango (50% de los IDs),ordenado,Lista,1.026
+búsqueda por rango (50% de los IDs),ordenado,ABB,1.041
+búsqueda por rango (50% de los IDs),ordenado,B+,0.97

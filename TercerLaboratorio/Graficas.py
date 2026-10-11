@@ -1,12 +1,12 @@
 """
-graficas.py  -  Laboratorio 3: Sistema de Busqueda
+graficas.py
 
 Lee resultados/resultados.csv (generado por experimentos.py), calcula las estadisticas
 (promedio y desviación estándar de las repeticiones) y genera:
   - resultados/tabla_resumen.csv      (todas las estadisticas)
   - resultados/graficas/*.png         (las graficas)
 
-Como correrlo (en la misma carpeta que experimentos.py):
+Como correrlo (en la misma carpeta que experimentos.py) usar la terminal:
     pip install pandas matplotlib      (solo la primera vez)
     python graficas.py
 """
@@ -97,6 +97,34 @@ tabla = pd.concat(filas, ignore_index=True).rename(columns={
 tabla.to_csv(os.path.join(CARPETA, "tabla_resumen.csv"), index=False, float_format="%.6g", encoding="utf-8-sig")
 print("Tabla resumen:", os.path.join(CARPETA, "tabla_resumen.csv"))
 
+
+def pendiente(st, est, orden):
+    """Pendiente de la recta ajustada a log10(promedio) vs log10(N): es el 'exponente' de N en la escala log-log."""
+    d = st[(st.estructura == est) & (st.orden == orden)].dropna(subset=["promedio"])
+    d = d[d["promedio"] > 0]
+    if len(d) < 3:
+        return None
+    return float(np.polyfit(np.log10(d["N"].astype(float)), np.log10(d["promedio"]), 1)[0])
+
+
+def etq(st, est, orden, texto):
+    """Agrega la pendiente al texto de la leyenda."""
+    p = pendiente(st, est, orden)
+    return texto if p is None else f"{texto} (pendiente {p:.2f})".replace(".", ",")
+
+
+filas_p = []
+for col, nombre_op, unidad in OPERACIONES:
+    if col == "altura":
+        continue
+    for orden in ["aleatorio", "ordenado"]:
+        for est in ["Lista", "ABB", "B+"]:
+            p = pendiente(ST[col], est, orden)
+            if p is not None:
+                filas_p.append({"operacion": nombre_op, "orden": orden, "estructura": est, "pendiente_log_log": round(p, 3)})
+pd.DataFrame(filas_p).to_csv(os.path.join(CARPETA, "pendientes.csv"), index=False, encoding="utf-8-sig")
+print("Pendientes:", os.path.join(CARPETA, "pendientes.csv"))
+
 # ----------------------------------------------------------------------------------------
 # FUNCIONES PARA DIBUJAR
 # ----------------------------------------------------------------------------------------
@@ -131,7 +159,11 @@ def formato(ax, titulo, xlabel, ylabel, log_x=True, log_y=True, ticks_n=True):
         ax.set_xticklabels([miles(n) for n in TAMANOS], rotation=45, fontsize=8)
         ax.xaxis.set_minor_locator(NullLocator())
     ax.grid(True, which="major", alpha=0.35)
-    ax.legend(fontsize=8)
+    _, etiquetas = ax.get_legend_handles_labels()
+    if len(etiquetas) > 4:                       # leyendas largas: se ponen debajo para no tapar las curvas
+        ax.legend(fontsize=8, loc="upper center", bbox_to_anchor=(0.5, -0.30), ncol=2)
+    else:
+        ax.legend(fontsize=8)
 
 
 def guardar(fig, nombre, titulo, pie):
@@ -147,6 +179,7 @@ def guardar(fig, nombre, titulo, pie):
 
 PIE_BASE = f"Promedio de {N_REP} repeticiones; barras = ±1 desviación estándar; ejes en escala logarítmica."
 PIE_BUSQUEDA = PIE_BASE + f" Cada repetición hace M = {miles(M)} búsquedas."
+PIE_PEND = " Pendiente de la leyenda: recta ajustada en escala log-log (≈ 1 lineal, ≈ 2 cuadrática, cerca de 0 crecimiento muy lento)."
 
 # ----------------------------------------------------------------------------------------
 # GRAFICAS (5)
@@ -156,20 +189,20 @@ print("Graficas:")
 # 1. Busqueda por ID vs N (IDs aleatorios)
 fig, ax = plt.subplots(figsize=(8, 5.5))
 for est in ESTRUCTURAS:
-    curva(ax, serie(ST["busqueda_us"], est, "aleatorio"), "N", est, "aleatorio", NOMBRE[est])
+    curva(ax, serie(ST["busqueda_us"], est, "aleatorio"), "N", est, "aleatorio", etq(ST["busqueda_us"], est, "aleatorio", NOMBRE[est]))
 formato(ax, "IDs insertados en orden aleatorio", "Cantidad de estudiantes N", "Tiempo por búsqueda (microsegundos)")
 guardar(fig, "01_busqueda_vs_N.png", "Búsqueda por ID: tiempo vs. N",
-        PIE_BUSQUEDA + "")
+        PIE_BUSQUEDA + PIE_PEND)
 
 # 2. Efecto del orden de insercion en la busqueda
 fig, ax = plt.subplots(figsize=(8, 5.5))
 for est in ESTRUCTURAS:
     for orden in ["aleatorio", "ordenado"]:
-        curva(ax, serie(ST["busqueda_us"], est, orden), "N", est, orden, f"{NOMBRE_CORTO[est]}, IDs {orden}s")
+        curva(ax, serie(ST["busqueda_us"], est, orden), "N", est, orden, etq(ST["busqueda_us"], est, orden, f"{NOMBRE_CORTO[est]}, IDs {orden}s"))
 formato(ax, "Mismo color = misma estructura; línea punteada = IDs ordenados", "Cantidad de estudiantes N",
         "Tiempo por búsqueda (microsegundos)")
 guardar(fig, "02_efecto_del_orden_busqueda.png", "Búsqueda por ID: IDs aleatorios vs. IDs ordenados",
-        PIE_BUSQUEDA + "")
+        PIE_BUSQUEDA + PIE_PEND)
 
 # 3. Altura vs N
 fig, ax = plt.subplots(figsize=(8, 5.5))
@@ -186,14 +219,23 @@ guardar(fig, "03_altura_vs_N.png", "Altura del árbol vs. N",
 fig, axs = plt.subplots(1, 2, figsize=(13, 5.5), sharey=True)
 for ax, orden in zip(axs, ["aleatorio", "ordenado"]):
     for est in ESTRUCTURAS:
-        curva(ax, serie(ST["insercion_ms"], est, orden), "N", est, orden, NOMBRE_CORTO[est])
+        curva(ax, serie(ST["insercion_ms"], est, orden), "N", est, orden, etq(ST["insercion_ms"], est, orden, NOMBRE_CORTO[est]))
     formato(ax, f"IDs {orden}s", "Cantidad de estudiantes N", "Tiempo total de inserción (milisegundos)")
-guardar(fig, "04_insercion_vs_N.png", "Inserción de los N estudiantes: tiempo total vs. N", PIE_BASE)
+guardar(fig, "04_insercion_vs_N.png", "Inserción de los N estudiantes: tiempo total vs. N", PIE_BASE + PIE_PEND)
 
-# 5. Busqueda por rango (dos paneles, IDs aleatorios)
+# 5. Listado ordenado vs N
+fig, axs = plt.subplots(1, 2, figsize=(13, 5.5), sharey=True)
+for ax, orden in zip(axs, ["aleatorio", "ordenado"]):
+    for est in ESTRUCTURAS:
+        curva(ax, serie(ST["listado_ms"], est, orden), "N", est, orden, etq(ST["listado_ms"], est, orden, NOMBRE_CORTO[est]))
+    formato(ax, f"IDs {orden}s", "Cantidad de estudiantes N", "Tiempo de listado (milisegundos)")
+guardar(fig, "05_listado_vs_N.png", "Listado de todos los estudiantes en orden ascendente de ID: tiempo vs. N",
+        PIE_BASE + " El listado se mide una sola vez por repetición. Lista: sorted(); ABB: recorrido inorden; B+: recorrido de las hojas enlazadas." + PIE_PEND)
+
+# 6. Busqueda por rango (dos paneles, IDs aleatorios)
 fig, axs = plt.subplots(1, 2, figsize=(13, 5.5))
 for est in ESTRUCTURAS:
-    curva(axs[0], serie(ST["rango_chico_ms"], est, "aleatorio"), "N", est, "aleatorio", NOMBRE_CORTO[est])
+    curva(axs[0], serie(ST["rango_chico_ms"], est, "aleatorio"), "N", est, "aleatorio", etq(ST["rango_chico_ms"], est, "aleatorio", NOMBRE_CORTO[est]))
 formato(axs[0], "Rango chico (1% de los IDs), según N", "Cantidad de estudiantes N",
         "Tiempo por consulta de rango (milisegundos)")
 for est in ESTRUCTURAS:
@@ -205,7 +247,7 @@ for est in ESTRUCTURAS:
     curva(axs[1], pd.DataFrame(puntos), "N", est, "aleatorio", NOMBRE_CORTO[est])
 formato(axs[1], f"Según el tamaño del rango (N = {miles(N_FIJO_RANGOS)})", "Estudiantes devueltos por consulta",
         "Tiempo por consulta de rango (milisegundos)", ticks_n=False)
-guardar(fig, "05_busqueda_por_rango.png", "Búsqueda por rango (IDs aleatorios)",
-        PIE_BASE + f" {M_RANGOS} consultas por repetición. Derecha: rangos de 0,1%, 1%, 10% y 50% de los IDs.")
+guardar(fig, "06_busqueda_por_rango.png", "Búsqueda por rango (IDs aleatorios)",
+        PIE_BASE + f" {M_RANGOS} consultas por repetición. Derecha: rangos de 0,1%, 1%, 10% y 50% de los IDs." + PIE_PEND)
 
 print("Listo.")

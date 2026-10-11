@@ -1,12 +1,11 @@
 """
-experimentos.py  -  Laboratorio 3: Sistema de Busqueda
+experimentos.py
 
 Mide el tiempo de Lista, ABB y B+ al variar N, con IDs aleatorios y ordenados.
 Cada medicion se guarda como una fila en resultados/resultados.csv (tiempos en SEGUNDOS).
 
 Como correrlo (en la misma carpeta que los otros archivos .py):
-    python experimentos.py           -> experimento COMPLETO (tarda un buen rato)
-    python experimentos.py rapido    -> prueba pequena (1 minuto) para verificar que todo funcione
+    python experimentos.py  en la terminal
 """
 import csv
 import gc
@@ -16,14 +15,12 @@ import sys
 import time
 
 from GenerarEstudiantes import generar_N_estudiantes, generar_M_busquedas, generar_M_rangos
-from Lista import (insertar_estudiantes_lista, buscar_estudiante_id_lista,
-                   listar_orden_id_lista, buscar_rango_lista)
-from ArbolABB import (insertar_estudiante_ABB, buscar_id_estudiante_ABB,
-                      listar_orden_id_estudiantes_ABB, buscar_rango_ABB, altura_ABB)
+from Lista import (insertar_estudiantes_lista, buscar_estudiante_id_lista, listar_orden_id_lista, buscar_rango_lista)
+from ArbolABB import (insertar_estudiante_ABB, buscar_id_estudiante_ABB, listar_orden_id_estudiantes_ABB, buscar_rango_ABB, altura_ABB)
 from ArbolBMas import ArbolBMas
 
 # ----------------------------------------------------------------------------------------
-# PARAMETROS DEL EXPERIMENTO  (aqui se cambia todo)
+# PARAMETROS DEL EXPERIMENTO 
 # ----------------------------------------------------------------------------------------
 if len(sys.argv) > 1 and sys.argv[1] == "rapido":
     TAMANOS_N = [100, 500, 1000, 2000]
