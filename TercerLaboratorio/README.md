@@ -296,3 +296,40 @@ La altura influye en los tiempos. El ABB ordenado es lineal en tiempo porque su 
 
 #### Cuál es el mejor:
 El B+ porque funciona bien con sus IDs aleatorios y ordenados. EL ABB solo gana con IDs aleatorios y la Lista siempre es peor por su costo cuadrático.
+
+---
+## Gráfica #5: Listado de Todos los Estudiantes en Orden Ascendente de ID
+<img width="1950" height="825" alt="image" src="https://github.com/user-attachments/assets/42f1d2bd-2572-4638-9794-3b393da691d6" />
+
+Esta es la gráfica más ruidosa de todas: Los tiempos son muy chiquitos y se miden una sola vez.
+
+* **Lista:**
+  * Pendiente (aleatorios): 0.97 (casi lineal).
+  * El costo es lineal-logarítmico O(N log N).
+  * La teoría dice que es lineal-logarítmico porque la lista no está ordenada y la función ``sorted()`` tiene que ordenarla, y ordenar N datos cuesta N log N.
+    
+  * Pendiente (ordenados): 0.92 (casi lineal).
+  * El costo es lineal-logarítmico O(N log N).
+  * La teoría dice que es lineal-logarítmica, pero es más rápida que en IDs aleatorios poque la lista y esta ordenada y la función ``sorted()`` lo detecta y casi no trabaja.
+    
+* **ABB:** 
+  * Pendiente (aleatorios): 0.83 (cerca de 1).
+  * Pendiente (ordenados): 0.87 (cerca de 1).
+  * El costo es lineal O(N) para ambos casos.
+  * La teoría dice que es lineal, porque el recorrido en orden  (INORDER) visita cada nodo exactamente una vez y ya salen ordenados, no importa la forma del árbol: N nodos = N visitas.
+  * El orden de inserción casi no afecta el listado del ABB, es una de las pocas operaciones donde el ABB degenerado no se ve perjudicado.
+ 
+    
+* **Árbol B+:**  
+  * Pendiente en IDs aleatorios: 0.62 (cerca de 1).
+  * Pendiente en IDS ordenados: 0.69 (cerca de 1).
+  * En ambos casos, el costo es lineal O(N).
+  * La teoría dice que es lineal porque baja hasta la primera hoja y recorre la cadena de hojas, visitando cada estudiante una vez
+  * No le afecta el orden.
+
+
+#### Comparación general:
+* Con IDs aleatorios: El mejor es el B+, seguido del ABB y el peor la Lista.
+* Con IDs ordenados:  Los mejores son la Lista y el B+ (quienes quedan parecidos y con barras que se tocan), y finalmente, el peor es el ABB.
+
+---
