@@ -41,7 +41,7 @@ Cada nodo guarda un estudiante, y tiene un hijo izquierdo (IDs menores) y un hij
 * Altura: cuenta los niveles del árbol.
 * Si los IDs se insertan ordenados, el árbol queda como una cadena (altura = N) y se comporta como una lista.
 
-### Árbol B+ (ArbolBMas.py)
+### Árbol B+ (``ArbolBMas.py``)
 
 Árbol balanceado de **grado 50**: cada nodo guarda hasta 50 claves. Los nodos internos solo guardan claves que sirven de guía; los estudiantes están solo en las hojas, y las hojas están enlazadas entre sí.
 
@@ -224,13 +224,13 @@ Analizando el caso de IDs ordenados:
   * La teoría dice que es logarítmico sin importar el orden de los IDs, porque el B+ se organiza al insertar, dividiendo los nodos que se llenan y por eso, siempre queda balanceado.
   * El orden de inserción no afecta al costo del B+.
 
-#### Comparación general para IDs ordenados
+#### Comparación general para IDs ordenados:
 El mejor es el B+, seguido de la Lista y el peor es el ABB.
 
-#### Cuál es la mejor estructura en general según la gráfica #2
+#### Cuál es la mejor estructura en general según la gráfica #2:
 El B+ porque funciona bien para ambos casos (IDs aleatorios o IDs en orden).
 
-#### Por qué el ABB ordenado es peor que la lista
+#### Por qué el ABB ordenado es peor que la lista:
 Ambos son lineales O(N), pero cada paso por un nodo del árbol cuesta más que revisar un elemento de la lista.
 
 ---
@@ -253,14 +253,46 @@ Ambos son lineales O(N), pero cada paso por un nodo del árbol cuesta más que r
   * La teoría dice que es logarítmica porque cada nodo guarda **hasta 50 claves** y el árbol sólo gana un nivel cuando se divide la raíz, que pasa a veces.
   * Es igual con IDs aleatorios u ordenados, el orden no le afecta.
 
-#### Comparación general
+#### Comparación general:
 * El árbol de menor altura es el B+
 * El ABB aleatorio y el B+ son logarítmicos en tiempo porque su altura es logarítmica.
 
-#### Relación con las gráficas #1 y #2
+#### Relación con las gráficas #1 y #2:
 La altura influye en los tiempos. El ABB ordenado es lineal en tiempo porque su altura es lineal. En cambio, el ABB aleatorio y el B+ son logarítmicos en tiempo porque su altura es logarítmica.
 
 ---
 ## Gráfica #4: Inserción de los N estudiantes (IDs aleatorios y IDs ordenados)
 
 <img width="1950" height="825" alt="image" src="https://github.com/user-attachments/assets/89fc27ed-fb94-4ecd-9054-9ef6b5319002" />
+
+* **Lista:**
+  * Pendiente (aleatorios): 1.89 (casi 2).
+  * Pendiente (aleatorios): 2.01 (casi 2).
+  * El costo es cuadrático O(N^2) para ambos casos.
+  * La teoría dice que es cuadrático, porque antes de insertar cada estudiante la lista revisa que su ID no exista, recorriendo los elementos existentes ene ella. El primer estudiante cuesta 1 revisión, el segundo 2, ... , hasta N. La suma total es del orden de N^2.
+  * Es la peor estructura para insertar, el orden no la afecta.
+    
+* **ABB (IDs aleatorios):** 
+  * Pendiente: 1.07 (es casi lineal).
+  * El costo es lineal-logarítmico O(N log N).
+  * La teoría dice que es lineal-logarítmico, porque cada inserción baja por un árbol de altura logarítmica (gráfica #3), y se hacen N inserciones: N veces log N.
+ 
+* **ABB (IDs ordenados):** 
+  * Pendiente: 2.02 (cerca de 2)
+  * El costo es cuadrático O(N^2).
+  * La teoría dice que es cuadrático, porque el árbol es una "una cadena" (gráfica #3). El estudiante #i recorre primero i niveles antes de ubicarse. La suma total es del orden N^2.
+  * El orden de inserción rompe el ABB.
+  * Es peor que la lista porque bajar por un nodo del árbol, cuesta más que revisar un elemento de la lista. 
+    
+* **Árbol B+:**  
+  * Pendiente en IDs aleatorios: 1.05 (casi lineal).
+  * Pendiente en IDS ordenados: 1.18 (casi lineal).
+  * En ambos casos, el costo es lineal-logarítmico O(N log N).
+  * La teoría dice que es lineal-logarítmico porque cada inserción baja por unos pocos niveles y en ocasiones se divide un nodo.
+ 
+#### Comparación general:
+* Con IDs aleatorios: El mejor es el ABB, seguido del B+ y el peor la Lista.
+* Con IDs ordenados:  El mejor es el B+, seguido de la Lista y el peor es el ABB.
+
+#### Cuál es el mejor:
+El B+ porque funciona bien con sus IDs aleatorios y ordenados. EL ABB solo gana con IDs aleatorios y la Lista siempre es peor por su costo cuadrático.
