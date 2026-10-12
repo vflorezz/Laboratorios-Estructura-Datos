@@ -199,6 +199,7 @@ El ABB es el mejor, le sigue el B+ y el peor es la Lista para el caso de IDs ale
 
 Puede parecer extraño que el B+ no sea el más veloz porque tiene pocos niveles, pero esto ocurre porque en cada nivel revisa **hasta 50 claves**, mientras que el ABB compara una sola. En este caso, menos niveles no significa menos trabajo.
 
+---
 ### Gráfica #2: Búsqueda por ID (IDs aleatorios vs IDs Ordenados)
 
 <img width="1950" height="825" alt="image" src="https://github.com/user-attachments/assets/9840c51f-f2ba-435d-aedd-bc11147f140a" />
@@ -232,6 +233,7 @@ El B+ porque funciona bien para ambos casos (IDs aleatorios o IDs en orden).
 #### Por qué el ABB ordenado es peor que la lista
 Ambos son lineales O(N), pero cada paso por un nodo del árbol cuesta más que revisar un elemento de la lista.
 
+---
 ### Gráfica #3: Altura del Árbol vs N (IDs aleatorios e IDs ordenados)
 <img width="1950" height="825" alt="image" src="https://github.com/user-attachments/assets/b9ada27b-d908-46a8-87f4-b3c291d9bdbd" />
 
@@ -257,3 +259,8 @@ Ambos son lineales O(N), pero cada paso por un nodo del árbol cuesta más que r
 
 #### Relación con las gráficas #1 y #2
 La altura influye en los tiempos. El ABB ordenado es lineal en tiempo porque su altura es lineal. En cambio, el ABB aleatorio y el B+ son logarítmicos en tiempo porque su altura es logarítmica.
+
+---
+## Gráfica #4: Inserción de los N estudiantes (IDs aleatorios y IDs ordenados)
+
+<img width="1950" height="825" alt="image" src="https://github.com/user-attachments/assets/89fc27ed-fb94-4ecd-9054-9ef6b5319002" />
