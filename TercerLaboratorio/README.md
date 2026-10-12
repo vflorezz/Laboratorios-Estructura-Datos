@@ -324,7 +324,7 @@ Esta es la gráfica más ruidosa de todas: Los tiempos son muy chiquitos y se mi
   * Pendiente en IDs aleatorios: 0.62 (cerca de 1).
   * Pendiente en IDS ordenados: 0.69 (cerca de 1).
   * En ambos casos, el costo es lineal O(N).
-  * La teoría dice que es lineal porque baja hasta la primera hoja y recorre la cadena de hojas, visitando cada estudiante una vez
+  * La teoría dice que es lineal porque baja hasta la primera hoja y recorre la cadena de hojas, visitando cada estudiante una vez.
   * No le afecta el orden.
 
 
@@ -333,3 +333,41 @@ Esta es la gráfica más ruidosa de todas: Los tiempos son muy chiquitos y se mi
 * Con IDs ordenados:  Los mejores son la Lista y el B+ (quienes quedan parecidos y con barras que se tocan), y finalmente, el peor es el ABB.
 
 ---
+## Gráfica #6: Búsqueda por Rango (IDs aleatorios)
+
+<img width="1950" height="825" alt="image" src="https://github.com/user-attachments/assets/de766135-8c62-4ff7-88ec-629422682aa8" />
+
+* **Lista (gráfica izquierda):**
+  * Pendiente: 0.91 (cerca a 1).
+  * El costo es lineal O(N).
+  * La teoría dice que es lineal porque para cualquier rango la lista revisa todos los estudiantes.
+    
+* **Lista (gráfica derecha):**
+  * Es casi plana con rangos pequeños y solo sube con rangos más grandes.
+  * Lo que cuesta es el recorrido de los N (que son fijos N= 10.000) y lo único que crece con el rango es ordenar los resultados.
+    
+* **ABB (gráfica izquierda):** 
+  * Pendiente: 0.70 (entre la log y la lineal).
+  * La teoría dice que el costo es bajar hasta el inicio del rango (logarítmico) + recoger a los k estudiantes (proporcional a k). Como el rango es del 1% de N, k crece con N y por eso, la pendiente queda entre las 2.
+  * El costo es lineal-logarítmico O(N log N).
+    
+ * **ABB (gráfica derecha):** 
+  * crece con el tamaño del rango, crece casi en proporción a k.
+    
+* **Árbol B+ (gráfica izquierda):**  
+  * Pendiente: 0.45 (entre log y lineal).
+  * La teoría dice que el costo es bajar hasta el inicio del rango y recoger k estudiantes. Pero, baja menos y además va por las hojas enlazadas.
+  * El costo es O (N log N).
+ 
+* **Árbol B+ (gráfica derecha):** 
+  * Crece en proporción a k.
+ 
+#### Comparación general:
+
+* Rangos pequeños: Son rápidos ABB y B+, la lista es más lenta.
+* Rangos enormes: El mejor es el B+, luego el ABB y el peor, la Lista.
+
+La ventaja contra la lista se achica porque cuando hay que devolver miles de estudiantes, hay más trabajo (en rangos enormes).
+
+#### Cuál es mejor:
+El B+ es el mejor, le sigue el ABB y el peor es la Lista.
