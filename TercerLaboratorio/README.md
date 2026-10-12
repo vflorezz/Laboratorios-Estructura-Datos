@@ -371,3 +371,76 @@ La ventaja contra la lista se achica porque cuando hay que devolver miles de est
 
 #### Cuál es mejor:
 El B+ es el mejor, le sigue el ABB y el peor es la Lista.
+
+---
+## 7. Limitaciones
+1. N llega solo hasta 20.000 (por el límite de tiempo del experimento). Para N mayores no hay mediciones.
+2. Solo 10 repeticiones por combinación, así que la desviación estándar es una estimación aproximada.
+3. Con N pequeños los tiempos son diminutos y muy ruidosos (las barras son grandes), y los costos fijos aplanan las curvas. Por eso las pendientes con N pequeños se deben leer con cuidado.
+4. La pendiente se calcula con solo 6 valores de N y es una pista, no una prueba, de la complejidad.
+5. El listado se mide una sola vez por repetición, así que es la medición más ruidosa.
+6. Los IDs están repartidos de forma uniforme y el 50% de las búsquedas son de IDs que existen. Con otras distribuciones los resultados podrían cambiar.
+7. El computador no estaba aislado: el sistema operativo y otros procesos pueden afectar las mediciones.
+
+---
+## 8. Hardware, Software y Librerías
+
+| Componente | Detalle |
+|---|---|
+| Procesador | Intel Core i5-1235U de 12.ª generación (frecuencia base 1,30 GHz, 12 núcleos lógicos) |
+| Memoria RAM | 16,0 GB (3200 MT/s) |
+| Gráficos | Intel Iris Xe (128 MB) |
+| Almacenamiento | 477 GB |
+| Sistema operativo | Windows 11 (10.0.26200) |
+| Lenguaje | Python 3.13.2 (64 bits) |
+| Editor | Visual Studio Code |
+| Librerías | `pandas` 3.0.6, `matplotlib` 3.11.2, `numpy` 2.5.2 |
+ 
+Los experimentos (`experimentos.py`) usan solo la biblioteca estándar de Python (`time`, `gc`, `random`, `csv`). Las librerías anteriores se usan solo en `graficas.py`.
+ 
+**Comandos para consultar las versiones** (en la terminal):
+ 
+```
+python --version
+python -m pip show pandas matplotlib numpy
+```
+ 
+`experimentos.py` también guarda el sistema operativo, el procesador, la versión de Python y los parámetros en `resultados/info_sistema.txt`.
+
+---
+## 9. Cómo se Ejecutaron los Experimentos
+Fecha de ejecución: 11/10/2026
+Duración total del experimento completo: 5.6 minutos (el programa lo muestra al terminar: "Terminado en X minutos").
+Condiciones: Tenía abierto GitHub Desktop al inicio de la ejecución y Edge.
+Los datos de las tablas y gráficas salen de una misma ejecución completa (la última).
+
+---
+## 10. Cómo Repetir el Experimento
+
+1. Instalar **Python 3** (se usó 3.13.2).
+2. Poner todos los archivos `.py` en una misma carpeta y abrir una terminal en esa carpeta (por ejemplo, abriendo la carpeta en VS Code).
+3. Instalar las librerías (solo la primera vez):
+```
+   python -m pip install pandas matplotlib
+```
+
+4. Cerrar los programas pesados y, si es un portátil, conectarlo al cargador. Ejecutar el experimento completo y anotar cuánto tarda:
+```
+   python experimentos.py
+```
+   Se crea la carpeta `resultados/` con `resultados.csv` e `info_sistema.txt`.
+5. Generar las tablas y las gráficas:
+```
+   python graficas.py
+```
+   Se crean `tabla_resumen.csv`, `pendientes.csv` y las 6 gráficas en `resultados/graficas/` (el script borra las imágenes de corridas anteriores).
+ 
+**Notas:**
+- Cada ejecución genera datos distintos, así que los tiempos variarán un poco entre corridas y entre computadores. Las tendencias deberían mantenerse.
+- Los parámetros (N, repeticiones, M, tamaños de rango) están al inicio de `experimentos.py` y se pueden cambiar ahí.
+
+---
+## 11. Código de Honor (Uso de la IA)
+
+En este laboratorio se hizo uso de la inteligencia artificial para:
+
