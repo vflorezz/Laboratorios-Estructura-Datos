@@ -1,6 +1,6 @@
 # Laboratorio #3: Sistema de Búsqueda de Estudiantes
 
----
+
 ## 1. Descripción del Problema y Objetivo
 
 ### El problema
@@ -61,3 +61,54 @@ Operación:
 * **Buscar por rango:** Lista (*lineal*, siempre revisa todos), ABB con IDs aleatorios (*logarítmica + k*), ABB con IDs ordenados (*lineal*) y Árbol B+ (*logarítmica + k*)
 
 k = cantidad de estudiantes que devuelve el rango.
+
+---
+## 3. Diseño Experimental y Forma de Medir
+
+#### Qué se mide
+Se hacen cinco experimentos, cada uno con **IDs aleatorios** y con **IDs ordenados**:
+ 
+| # | Experimento | Qué se mide |
+|---|---|---|
+| 1 | Búsqueda por ID | Tiempo total de M búsquedas |
+| 2 | Inserción | Tiempo total de insertar los N estudiantes, uno por uno, partiendo de una estructura vacía |
+| 3 | Listado | Tiempo de listar los N estudiantes en orden ascendente de ID |
+| 4 | Búsqueda por rango | Tiempo total de 100 consultas de rango, con cuatro tamaños de rango |
+| 5 | Altura | Número de niveles del ABB y del B+ (no se mide tiempo) |
+
+#### Cómo se generan los datos (``GenerarEstudiantes.py``)
+
+* Los IDs son números únicos elegidos al azar entre 1 y 10·N. Con IDs ordenados, esos mismos IDs se ordenan de menor a mayor. El rango llega hasta 10·N para que existan IDs que no están guardados, y así poder probar búsquedas que no encuentran nada.
+* El nombre, la edad (entre 17 y 30) y el promedio (entre 1,0 y 10,0) se eligen al azar.
+* Cada ejecución genera datos distintos, por eso cada prueba se repite varias veces.
+
+#### Cómo se generan las búsquedas
+
+* **Por ID:** M IDs; cada uno, con probabilidad 50%, es un ID que existe, y si no, un ID que no existe.
+* **Por rango:** el ancho es una fracción del total de IDs (0,1%, 1%, 10% o 50%) y el inicio se elige al azar.
+
+#### Cómo se mide el tiempo
+
+* Se usa ``time.perf_counter()`` de Python, que es un cronómetro de alta precisión.
+* Antes de medir se ejecuta ``gc.collect()`` y el recolector de basura se apaga solo durante la medición, para que no meta pausas al azar.
+* Las búsquedas se miden en bloque (M seguidas), porque una sola dura apenas unos microsegundos y sería difícil medirla bien.
+* No se mide la generación de los datos, solo las operaciones de cada estructura.
+* En cada repetición los datos se generan una sola vez y se usan en las tres estructuras, para que la comparación sea justa. El programa comprueba además que las tres encuentren la misma cantidad de IDs y listen N estudiantes.
+* Cada medición se guarda de inmediato como una fila en ``resultados/resultados.csv``.
+
+---
+
+## Parámetros del Experimento
+
+| Parámetro | Valor |
+|---|---|
+| **N** (cantidad de estudiantes) | 100, 500, 1.000, 5.000, 10.000 y 20.000 |
+| **Orden de inserción** | Aleatorio y ordenado |
+| **Repeticiones** | 10 por cada combinación (orden, estructura, N) |
+| **M** (búsquedas por ID en cada repetición) | 1.000 |
+| **Porcentaje de búsquedas de IDs que existen** | 50% (el otro 50% son IDs que no existen) |
+| **Consultas por rango** | 100 por repetición y por tamaño de rango |
+| **Tamaños de rango** | 0,1%, 1%, 10% y 50% del rango de IDs |
+| **Grado del B+** | 50 |
+
+En total hay **360 mediciones** (2 órdenes × 6 valores de N × 3 estructuras × 10 repeticiones).
