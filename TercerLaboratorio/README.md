@@ -22,7 +22,7 @@ Estudiar experimentalmente cómo cambia el tiempo de ejecución cuando se guarda
 
 Cada estudiante se guarda como una tupla ``(id, nombre, edad, promedio)``.
 
-#### Lista (``Lista.py``)
+### Lista (``Lista.py``)
 
 Una lista de Python con los estudiantes, en el orden en que llegan.
 
@@ -31,7 +31,7 @@ Una lista de Python con los estudiantes, en el orden en que llegan.
 * Listar: usa ``sorted()`` para ordenar por ID.
 * Rango: recorre todos los estudiantes, se queda con los que están en el rango y los ordena.
 
-#### Árbol binario de búsqueda, ABB (``ArbolABB.py``)
+### Árbol binario de búsqueda, ABB (``ArbolABB.py``)
 
 Cada nodo guarda un estudiante, y tiene un hijo izquierdo (IDs menores) y un hijo derecho (IDs mayores). Las funciones son iterativas (con ``while``), porque con la recursión Python falla cuando el árbol queda muy profundo.
 
@@ -41,7 +41,7 @@ Cada nodo guarda un estudiante, y tiene un hijo izquierdo (IDs menores) y un hij
 * Altura: cuenta los niveles del árbol.
 * Si los IDs se insertan ordenados, el árbol queda como una cadena (altura = N) y se comporta como una lista.
 
-#### Árbol B+ (ArbolBMas.py)
+### Árbol B+ (ArbolBMas.py)
 
 Árbol balanceado de **grado 50**: cada nodo guarda hasta 50 claves. Los nodos internos solo guardan claves que sirven de guía; los estudiantes están solo en las hojas, y las hojas están enlazadas entre sí.
 
@@ -51,7 +51,7 @@ Cada nodo guarda un estudiante, y tiene un hijo izquierdo (IDs menores) y un hij
 * Rango: baja hasta la hoja donde empieza el rango y avanza por las hojas enlazadas.
 * Altura: cuenta los niveles (todas las hojas están siempre al mismo nivel).
 
-#### Complejidad que predice la teoría
+### Complejidad que predice la teoría
 
 Operación:
 
@@ -65,7 +65,7 @@ k = cantidad de estudiantes que devuelve el rango.
 ---
 ## 3. Diseño Experimental y Forma de Medir
 
-#### Qué se mide
+### Qué se mide
 Se hacen cinco experimentos, cada uno con **IDs aleatorios** y con **IDs ordenados**:
  
 | # | Experimento | Qué se mide |
@@ -76,18 +76,18 @@ Se hacen cinco experimentos, cada uno con **IDs aleatorios** y con **IDs ordenad
 | 4 | Búsqueda por rango | Tiempo total de 100 consultas de rango, con cuatro tamaños de rango |
 | 5 | Altura | Número de niveles del ABB y del B+ (no se mide tiempo) |
 
-#### Cómo se generan los datos (``GenerarEstudiantes.py``)
+### Cómo se generan los datos (``GenerarEstudiantes.py``)
 
 * Los IDs son números únicos elegidos al azar entre 1 y 10·N. Con IDs ordenados, esos mismos IDs se ordenan de menor a mayor. El rango llega hasta 10·N para que existan IDs que no están guardados, y así poder probar búsquedas que no encuentran nada.
 * El nombre, la edad (entre 17 y 30) y el promedio (entre 1,0 y 10,0) se eligen al azar.
 * Cada ejecución genera datos distintos, por eso cada prueba se repite varias veces.
 
-#### Cómo se generan las búsquedas
+### Cómo se generan las búsquedas
 
 * **Por ID:** M IDs; cada uno, con probabilidad 50%, es un ID que existe, y si no, un ID que no existe.
 * **Por rango:** el ancho es una fracción del total de IDs (0,1%, 1%, 10% o 50%) y el inicio se elige al azar.
 
-#### Cómo se mide el tiempo
+### Cómo se mide el tiempo
 
 * Se usa ``time.perf_counter()`` de Python, que es un cronómetro de alta precisión.
 * Antes de medir se ejecuta ``gc.collect()`` y el recolector de basura se apaga solo durante la medición, para que no meta pausas al azar.
@@ -119,7 +119,7 @@ En total hay **360 mediciones** (2 órdenes × 6 valores de N × 3 estructuras �
 
 Las estadísticas y las gráficas las produce el archivo ``graficas.py``, a partir de ``resultados/resultados.csv``.
 
-#### Qué hace ``graficas.py``
+### Qué hace ``graficas.py``
 
 1. Lee ``resultados.csv`` (una fila por repetición).
 2. Agrupa las 10 repeticiones de cada combinación (orden, estructura, N).
@@ -127,7 +127,7 @@ Las estadísticas y las gráficas las produce el archivo ``graficas.py``, a part
 4. Calcula la pendiente de cada curva y la guarda en ``resultados/pendientes.csv``.
 5. Dibuja las 6 gráficas y las guarda en ``resultados/graficas/``.
 
-#### De dónde sale cada cosa
+### De dónde sale cada cosa
 
 | Qué | De dónde sale |
 |---|---|
@@ -138,14 +138,14 @@ Las estadísticas y las gráficas las produce el archivo ``graficas.py``, a part
 | **Valores atípicos** | Se marcan con la **regla de Tukey**: un valor es atípico si está por debajo de `Q1 − 1,5·IQR` o por encima de `Q3 + 1,5·IQR` (Q1 y Q3 son los cuartiles; IQR = Q3 − Q1). **No se elimina ningún dato**: solo se cuentan en la columna `atipicos_IQR` de la tabla. |
 | **Pendiente** | Se ajusta una recta a `log10(promedio)` contra `log10(N)` (con `numpy.polyfit`, usando todos los N medidos). Aparece en la leyenda de las curvas. |
 
-#### Por qué se eligió la escala log-log
+### Por qué se eligió la escala log-log
 
 Se usó escala logarítmica en **los dos ejes** (cada marca vale 10 veces la anterior) por dos razones:
 
 1. N va de 100 a 20.000 y los tiempos van de milésimas de segundo a varios segundos. En una escala normal, las curvas del ABB y del B+ quedarían pegadas abajo, casi planas, junto a la de la lista.
 2. En log-log la **pendiente** de una curva indica cómo crece el tiempo, y con eso se compara contra la complejidad teórica.
 
-#### Cómo leer la pendiente
+### Cómo leer la pendiente
 
 La tabla muestra la pendiente que daría una función perfecta con los N usados (100 a 20.000):
 
@@ -158,7 +158,7 @@ La tabla muestra la pendiente que daría una función perfecta con los N usados 
 
 La pendiente es una pista, no una prueba. Lineal (1,00) y N log N (1,14) están muy cerca y con ruido de medición no siempre se pueden distinguir; ahí se usa también lo que dice la teoría sobre el algoritmo.
 
-#### Cómo leer las gráficas
+### Cómo leer las gráficas
 
 * **Eje horizontal:** la cantidad de estudiantes N (en el panel derecho de la gráfica 6 es la cantidad de estudiantes que devuelve cada consulta de rango).
 * **Eje vertical:** el tiempo en segundos (en la gráfica 3, la altura). Los dos en escala logarítmica.
@@ -168,3 +168,37 @@ La pendiente es una pista, no una prueba. Lineal (1,00) y N log N (1,14) están 
 * La **leyenda** trae la pendiente de cada curva.
 * En las gráficas con dos paneles (2, 3, 4 y 5) el de la izquierda es con **IDs aleatorios** y el de la derecha con **IDs ordenados**. Los dos paneles comparten el eje vertical para poder compararlos.
 * La gráfica 3 no mide tiempo, mide la **altura** de los árboles (número de niveles). La línea punteada negra es una referencia: log₂(N).
+
+---
+
+## 6. Análisis de Resultados
+
+### Gráfica #1: Búsqueda por ID (aleatorios)
+
+<img width="1200" height="825" alt="image" src="https://github.com/user-attachments/assets/c1cc9e66-66e9-4908-9163-bf3108be185d" />
+
+* **Lista:**
+  * Pendiente: 0.91 (casi 1).
+  * El costo es lineal O(N).
+  * La teoría dice que es lineal, porque para buscar un ID, la lista revisa los estudiantes uno por uno.
+  * La lista funciona bien con pocos datos, pero cuando estos aumentan, el tiempo lo hace también de forma lineal. Por ello, la lista no escala bien.
+    
+* **ABB:** 
+  * Pendiente: 0.14 (cerca de 0).
+  * El costo es logarítmico.
+  * La teoría dice que es logarítmico, porque en cada paso del árbol se descarta más o menos la mitad de los estudiantes que quedan.
+  * El ABB con IDs en orden aleatorio para la búsqueda escala muy bien.
+    
+* **Árbol B+:** 
+  * Pendiente: 0.10 (cerca de 0).
+  * El costo es logarítmico O(log N).
+  * La teoría dice que es logaritmico, porque es un árbol y baja por niveles. Además, como sus nodos son grandes (aquí 50) tiene muy pocos niveles.
+
+#### Comparación general
+El ABB es el mejor, le sigue el B+ y el peor es la Lista para el caso de IDs aleatorios.
+
+Puede parecer extraño que el B+ no sea el más veloz porque tiene pocos niveles, pero esto ocurre porque en cada nivel revisa **hasta 50 claves**, mientras que el ABB compara una sola. En este caso, menos niveles no significa menos trabajo.
+
+### Gráfica #2: Búsqueda por ID (IDs aleatorios vs IDs Ordenados)
+
+<img width="1950" height="825" alt="image" src="https://github.com/user-attachments/assets/9840c51f-f2ba-435d-aedd-bc11147f140a" />
