@@ -53,12 +53,12 @@ Cada nodo guarda un estudiante, y tiene un hijo izquierdo (IDs menores) y un hij
 
 ### Complejidad que predice la teoría
 
-Operación:
-
-* **Buscar un ID:** Lista (*lineal*), ABB con IDs aleatorios (*logarítmica*), ABB con IDs ordenados (*lineal*) y Árbol B+ (*logarítmica*)
-* **Insertar los N estudiantes:** Lista (*cuadrática*), ABB con IDs aleatorios (*N log N*), ABB con IDs ordenados (*cuadrática*) y Árbol B+ (*N log N*)
-* **Listar ordenado:** Lista (*N log N*), ABB con IDs aleatorios (*lineal*), ABB con IDs ordenados (*lineal*) y Árbol B+ (*lineal*)
-* **Buscar por rango:** Lista (*lineal*, siempre revisa todos), ABB con IDs aleatorios (*logarítmica + k*), ABB con IDs ordenados (*lineal*) y Árbol B+ (*logarítmica + k*)
+| Operación | Lista | ABB (IDs aleatorios) | ABB (IDs ordenados) | Árbol B+ |
+|---|---|---|---|---|
+| Buscar un ID | lineal | logarítmica | lineal | logarítmica |
+| Insertar los N estudiantes | cuadrática | N log N | cuadrática | N log N |
+| Listar ordenado | N log N | lineal | lineal | lineal |
+| Buscar por rango | lineal (siempre revisa todos) | logarítmica + k | lineal | logarítmica + k |
 
 k = cantidad de estudiantes que devuelve el rango.
 
