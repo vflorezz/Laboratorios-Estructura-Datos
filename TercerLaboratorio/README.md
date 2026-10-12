@@ -98,7 +98,7 @@ Se hacen cinco experimentos, cada uno con **IDs aleatorios** y con **IDs ordenad
 
 ---
 
-## Parámetros del Experimento
+## 4. Parámetros del Experimento
 
 | Parámetro | Valor |
 |---|---|
@@ -112,3 +112,59 @@ Se hacen cinco experimentos, cada uno con **IDs aleatorios** y con **IDs ordenad
 | **Grado del B+** | 50 |
 
 En total hay **360 mediciones** (2 órdenes × 6 valores de N × 3 estructuras × 10 repeticiones).
+
+---
+
+## 5. Estadísticas y Gráficas
+
+Las estadísticas y las gráficas las produce el archivo ``graficas.py``, a partir de ``resultados/resultados.csv``.
+
+#### Qué hace ``graficas.py``
+
+1. Lee ``resultados.csv`` (una fila por repetición).
+2. Agrupa las 10 repeticiones de cada combinación (orden, estructura, N).
+3. Calcula para cada grupo el promedio, la desviación estándar, la mediana y cuántos valores atípicos hay, y los guarda en ``resultados/tabla_resumen.csv``.
+4. Calcula la pendiente de cada curva y la guarda en ``resultados/pendientes.csv``.
+5. Dibuja las 6 gráficas y las guarda en ``resultados/graficas/``.
+
+#### De dónde sale cada cosa
+
+| Qué | De dónde sale |
+|---|---|
+| **Tiempo** (en segundos) | Directo del CSV. Búsqueda: tiempo total de las 1.000 búsquedas. Inserción: tiempo total de insertar los N. Listado: tiempo de listar los N. Rango: tiempo total de las 100 consultas. |
+| **Promedio** (cada punto de las gráficas) | Suma de las 10 repeticiones dividida entre 10. |
+| **Desviación estándar** (las barras) | Mide cuánto se separan las 10 repeticiones de su promedio. Se calcula con `n − 1` (desviación muestral). |
+| **Mediana** | El valor central de las 10 repeticiones ordenadas. Se usa como comprobación en la tabla. |
+| **Valores atípicos** | Se marcan con la **regla de Tukey**: un valor es atípico si está por debajo de `Q1 − 1,5·IQR` o por encima de `Q3 + 1,5·IQR` (Q1 y Q3 son los cuartiles; IQR = Q3 − Q1). **No se elimina ningún dato**: solo se cuentan en la columna `atipicos_IQR` de la tabla. |
+| **Pendiente** | Se ajusta una recta a `log10(promedio)` contra `log10(N)` (con `numpy.polyfit`, usando todos los N medidos). Aparece en la leyenda de las curvas. |
+
+#### Por qué se eligió la escala log-log
+
+Se usó escala logarítmica en **los dos ejes** (cada marca vale 10 veces la anterior) por dos razones:
+
+1. N va de 100 a 20.000 y los tiempos van de milésimas de segundo a varios segundos. En una escala normal, las curvas del ABB y del B+ quedarían pegadas abajo, casi planas, junto a la de la lista.
+2. En log-log la **pendiente** de una curva indica cómo crece el tiempo, y con eso se compara contra la complejidad teórica.
+
+#### Cómo leer la pendiente
+
+La tabla muestra la pendiente que daría una función perfecta con los N usados (100 a 20.000):
+
+| Pendiente | Complejidad | Si N se duplica... |
+|---:|---|---|
+| cerca de 0,14 | logarítmica | el tiempo casi no cambia |
+| cerca de 1 | lineal | el tiempo se duplica |
+| cerca de 1,14 | N log N (casi lineal) | el tiempo se duplica y un poco más |
+| cerca de 2 | cuadrática | el tiempo se cuadruplica |
+
+La pendiente es una pista, no una prueba. Lineal (1,00) y N log N (1,14) están muy cerca y con ruido de medición no siempre se pueden distinguir; ahí se usa también lo que dice la teoría sobre el algoritmo.
+
+#### Cómo leer las gráficas
+
+* **Eje horizontal:** la cantidad de estudiantes N (en el panel derecho de la gráfica 6 es la cantidad de estudiantes que devuelve cada consulta de rango).
+* **Eje vertical:** el tiempo en segundos (en la gráfica 3, la altura). Los dos en escala logarítmica.
+* Cada **línea** es una estructura (Lista, ABB, Árbol B+), con su color.
+* Cada **punto** es el promedio de 10 repeticiones.
+* Las **barras verticales** son ± 1 desviación estándar: barra corta, medición muy repetible; barra larga, el tiempo varió mucho entre repeticiones. Si las barras de dos líneas se tocan, no se puede asegurar que sean realmente distintas.
+* La **leyenda** trae la pendiente de cada curva.
+* En las gráficas con dos paneles (2, 3, 4 y 5) el de la izquierda es con **IDs aleatorios** y el de la derecha con **IDs ordenados**. Los dos paneles comparten el eje vertical para poder compararlos.
+* La gráfica 3 no mide tiempo, mide la **altura** de los árboles (número de niveles). La línea punteada negra es una referencia: log₂(N).
