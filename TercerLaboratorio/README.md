@@ -1,9 +1,9 @@
 # Laboratorio #3: Sistema de Búsqueda de Estudiantes
 
 ---
-# 1. Descripción del Problema y Objetivo
+## 1. Descripción del Problema y Objetivo
 
-## El problema
+### El problema
 
 Una institución educativa necesita un sistema para administrar la información de sus estudiantes. De cada estudiante se guarda su ID (número único de matrícula), su nombre, su edad y su promedio. El sistema debe permitir:
 
@@ -13,16 +13,16 @@ Una institución educativa necesita un sistema para administrar la información 
 
 Además, se agregó una cuarta operación, la búsqueda por rango: obtener todos los estudiantes cuyo ID está entre dos valores ``a`` y ``b``.
 
-## Objetivo
+### Objetivo
 
 Estudiar experimentalmente cómo cambia el tiempo de ejecución cuando se guardan y se buscan los estudiantes con tres estrategias distintas (Lista, ABB y Árbol B+) a medida que aumenta la cantidad de estudiantes (N), y comparar lo que se mide con lo que predice la teoría. También se estudia cómo afecta el orden en que se insertan los IDs (aleatorio u ordenado).
 
 ---
-# 2. Estructuras de Datos y Algoritmos
+## 2. Estructuras de Datos y Algoritmos
 
 Cada estudiante se guarda como una tupla ``(id, nombre, edad, promedio)``.
 
-### Lista (``Lista.py``)
+#### Lista (``Lista.py``)
 
 Una lista de Python con los estudiantes, en el orden en que llegan.
 
@@ -31,7 +31,7 @@ Una lista de Python con los estudiantes, en el orden en que llegan.
 * Listar: usa ``sorted()`` para ordenar por ID.
 * Rango: recorre todos los estudiantes, se queda con los que están en el rango y los ordena.
 
-### Árbol binario de búsqueda, ABB (``ArbolABB.py``)
+#### Árbol binario de búsqueda, ABB (``ArbolABB.py``)
 
 Cada nodo guarda un estudiante, y tiene un hijo izquierdo (IDs menores) y un hijo derecho (IDs mayores). Las funciones son iterativas (con ``while``), porque con la recursión Python falla cuando el árbol queda muy profundo.
 
@@ -41,7 +41,7 @@ Cada nodo guarda un estudiante, y tiene un hijo izquierdo (IDs menores) y un hij
 * Altura: cuenta los niveles del árbol.
 * Si los IDs se insertan ordenados, el árbol queda como una cadena (altura = N) y se comporta como una lista.
 
-### Árbol B+ (ArbolBMas.py)
+#### Árbol B+ (ArbolBMas.py)
 
 Árbol balanceado de **grado 50**: cada nodo guarda hasta 50 claves. Los nodos internos solo guardan claves que sirven de guía; los estudiantes están solo en las hojas, y las hojas están enlazadas entre sí.
 
@@ -51,7 +51,7 @@ Cada nodo guarda un estudiante, y tiene un hijo izquierdo (IDs menores) y un hij
 * Rango: baja hasta la hoja donde empieza el rango y avanza por las hojas enlazadas.
 * Altura: cuenta los niveles (todas las hojas están siempre al mismo nivel).
 
-### Complejidad que predice la teoría
+#### Complejidad que predice la teoría
 
 Operación:
 
