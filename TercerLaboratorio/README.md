@@ -267,9 +267,9 @@ La altura influye en los tiempos. El ABB ordenado es lineal en tiempo porque su 
 
 * **Lista:**
   * Pendiente (aleatorios): 1.89 (casi 2).
-  * Pendiente (aleatorios): 2.01 (casi 2).
+  * Pendiente (ordenados): 2.01 (casi 2).
   * El costo es cuadrático O(N^2) para ambos casos.
-  * La teoría dice que es cuadrático, porque antes de insertar cada estudiante la lista revisa que su ID no exista, recorriendo los elementos existentes ene ella. El primer estudiante cuesta 1 revisión, el segundo 2, ... , hasta N. La suma total es del orden de N^2.
+  * La teoría dice que es cuadrático, porque antes de insertar cada estudiante la lista revisa que su ID no exista, recorriendo los elementos existentes en ella. El primer estudiante cuesta 1 revisión, el segundo 2, ... , hasta N. La suma total es del orden de N^2.
   * Es la peor estructura para insertar, el orden no la afecta.
     
 * **ABB (IDs aleatorios):** 
@@ -309,8 +309,8 @@ Esta es la gráfica más ruidosa de todas: Los tiempos son muy chiquitos y se mi
   * La teoría dice que es lineal-logarítmico porque la lista no está ordenada y la función ``sorted()`` tiene que ordenarla, y ordenar N datos cuesta N log N.
     
   * Pendiente (ordenados): 0.92 (casi lineal).
-  * El costo es lineal-logarítmico O(N log N).
-  * La teoría dice que es lineal-logarítmica, pero es más rápida que en IDs aleatorios poque la lista y esta ordenada y la función ``sorted()`` lo detecta y casi no trabaja.
+  * El costo es lineal O(N).
+  * La teoría dice que el costo baja a casi lineal, porque es más rápida que en IDs aleatorios porque la lista y está ordenada y la función ``sorted()`` lo detecta y casi no trabaja. Por eso se dice que el costo es O(N).
     
 * **ABB:** 
   * Pendiente (aleatorios): 0.83 (cerca de 1).
@@ -321,8 +321,8 @@ Esta es la gráfica más ruidosa de todas: Los tiempos son muy chiquitos y se mi
  
     
 * **Árbol B+:**  
-  * Pendiente en IDs aleatorios: 0.62 (cerca de 1).
-  * Pendiente en IDS ordenados: 0.69 (cerca de 1).
+  * Pendiente en IDs aleatorios: 0.62 (entre log y lineal).
+  * Pendiente en IDS ordenados: 0.69 (entre log y lineal).
   * En ambos casos, el costo es lineal O(N).
   * La teoría dice que es lineal porque baja hasta la primera hoja y recorre la cadena de hojas, visitando cada estudiante una vez.
   * No le afecta el orden.
@@ -349,7 +349,7 @@ Esta es la gráfica más ruidosa de todas: Los tiempos son muy chiquitos y se mi
 * **ABB (gráfica izquierda):** 
   * Pendiente: 0.70 (entre la log y la lineal).
   * La teoría dice que el costo es bajar hasta el inicio del rango (logarítmico) + recoger a los k estudiantes (proporcional a k). Como el rango es del 1% de N, k crece con N y por eso, la pendiente queda entre las 2.
-  * El costo es lineal-logarítmico O(N log N).
+  * El costo es O(log N + k).
     
  * **ABB (gráfica derecha):** 
   * crece con el tamaño del rango, crece casi en proporción a k.
@@ -357,7 +357,7 @@ Esta es la gráfica más ruidosa de todas: Los tiempos son muy chiquitos y se mi
 * **Árbol B+ (gráfica izquierda):**  
   * Pendiente: 0.45 (entre log y lineal).
   * La teoría dice que el costo es bajar hasta el inicio del rango y recoger k estudiantes. Pero, baja menos y además va por las hojas enlazadas.
-  * El costo es O (N log N).
+  * El costo es O (log N + k).
  
 * **Árbol B+ (gráfica derecha):** 
   * Crece en proporción a k.
@@ -447,7 +447,7 @@ En este laboratorio se hizo uso de la inteligencia artificial para:
 * Comprender los beneficios de la escala log-log y cómo interpretar la pendiente de una curva.
 * Entender como las barras verticales (± 1 desviación estándar) pueden influir en la confiabilidad del resultado y conclusiones.
 * *El código de las gráficas:* El archivo .py ``Graficas.py`` se desarrolló con la ayuda de la IA.
-* *Ajustar y mejorar el diseño experimental:* La IA ayudó a llegar a un diseño experimental mucho más organizado, incluyendo por ejemplo, sugerencias sobre el tamaño de N (que inicialmente era muy grande y tomaba mucho tiempo), así como para las M búsquedas.
+* *Ajustar y mejorar el diseño experimental:* La IA ayudó a llegar a un diseño experimental mucho más organizado, incluyendo por ejemplo, sugerencias sobre el tamaño de N (que inicialmente era muy grande y tomaba mucho tiempo), así como para las M búsquedas. Así como en el desarrollo de los experimentos (``Experimentos.py``) y corriguiendo errores.
 * Entender cómo correr los comandos para verificar las versiones de librerías, o instalarlas si era necesario. También, ayudó a saber cómo correr correctamente el código en la terminal.
-* *Corregir el código y comprender mejor la implementación de ciertas estructuras:* Inicialmente tenía implementaciones que usaban recursividad, la IA me indicó que dado que Python tiene un límite de recursiones, iba a tener problemas si mantenía ese enfoque, así que me sugirió que cambiara a una forma iterativa. Además, me ayudó a entender mejor la implementación del árbol B+ que me confundía. También, me ayudó a recordar que al listar en orden en un ABB se hace con INORDER (derecha - raíz - izquierda).
+* *Corregir el código y comprender mejor la implementación de ciertas estructuras:* Inicialmente tenía implementaciones que usaban recursividad, la IA me indicó que dado que Python tiene un límite de recursiones, iba a tener problemas si mantenía ese enfoque, así que me sugirió que cambiara a una forma iterativa. Además, me ayudó a entender mejor la implementación del árbol B+ que me confundía. También, me ayudó a recordar que al listar en orden en un ABB se hace con INORDER (izquierda - raíz - derecha).
 * *Redactar el README:* La IA me ayudó con parte de la redacción del README.
