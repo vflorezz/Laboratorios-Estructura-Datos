@@ -173,7 +173,7 @@ La pendiente es una pista, no una prueba. Lineal (1,00) y N log N (1,14) están 
 
 ## 6. Análisis de Resultados
 
-### Gráfica #1: Búsqueda por ID (aleatorios)
+## Gráfica #1: Búsqueda por ID (aleatorios)
 
 <img width="1200" height="825" alt="image" src="https://github.com/user-attachments/assets/c1cc9e66-66e9-4908-9163-bf3108be185d" />
 
@@ -200,7 +200,7 @@ El ABB es el mejor, le sigue el B+ y el peor es la Lista para el caso de IDs ale
 Puede parecer extraño que el B+ no sea el más veloz porque tiene pocos niveles, pero esto ocurre porque en cada nivel revisa **hasta 50 claves**, mientras que el ABB compara una sola. En este caso, menos niveles no significa menos trabajo.
 
 ---
-### Gráfica #2: Búsqueda por ID (IDs aleatorios vs IDs Ordenados)
+## Gráfica #2: Búsqueda por ID (IDs aleatorios vs IDs Ordenados)
 
 <img width="1950" height="825" alt="image" src="https://github.com/user-attachments/assets/9840c51f-f2ba-435d-aedd-bc11147f140a" />
 
@@ -234,7 +234,7 @@ El B+ porque funciona bien para ambos casos (IDs aleatorios o IDs en orden).
 Ambos son lineales O(N), pero cada paso por un nodo del árbol cuesta más que revisar un elemento de la lista.
 
 ---
-### Gráfica #3: Altura del Árbol vs N (IDs aleatorios e IDs ordenados)
+## Gráfica #3: Altura del Árbol vs N (IDs aleatorios e IDs ordenados)
 <img width="1950" height="825" alt="image" src="https://github.com/user-attachments/assets/b9ada27b-d908-46a8-87f4-b3c291d9bdbd" />
 
 * **ABB (IDs aleatorios):** 
