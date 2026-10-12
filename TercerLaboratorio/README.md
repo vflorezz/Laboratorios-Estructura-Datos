@@ -444,3 +444,10 @@ Los datos de las tablas y gráficas salen de una misma ejecución completa (la �
 
 En este laboratorio se hizo uso de la inteligencia artificial para:
 
+* Comprender los beneficios de la escala log-log y cómo interpretar la pendiente de una curva.
+* Entender como las barras verticales (± 1 desviación estándar) pueden influir en la confiabilidad del resultado y conclusiones.
+* *El código de las gráficas:* El archivo .py ``Graficas.py`` se desarrolló con la ayuda de la IA.
+* *Ajustar y mejorar el diseño experimental:* La IA ayudó a llegar a un diseño experimental mucho más organizado, incluyendo por ejemplo, sugerencias sobre el tamaño de N (que inicialmente era muy grande y tomaba mucho tiempo), así como para las M búsquedas.
+* Entender cómo correr los comandos para verificar las versiones de librerías, o instalarlas si era necesario. También, ayudó a saber cómo correr correctamente el código en la terminal.
+* *Corregir el código y comprender mejor la implementación de ciertas estructuras:* Inicialmente tenía implementaciones que usaban recursividad, la IA me indicó que dado que Python tiene un límite de recursiones, iba a tener problemas si mantenía ese enfoque, así que me sugirió que cambiara a una forma iterativa. Además, me ayudó a entender mejor la implementación del árbol B+ que me confundía. También, me ayudó a recordar que al listar en orden en un ABB se hace con INORDER (derecha - raíz - izquierda).
+* *Redactar el README:* La IA me ayudó con parte de la redacción del README.
