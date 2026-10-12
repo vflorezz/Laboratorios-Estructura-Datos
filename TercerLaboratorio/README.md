@@ -194,7 +194,7 @@ La pendiente es una pista, no una prueba. Lineal (1,00) y N log N (1,14) están 
   * El costo es logarítmico O(log N).
   * La teoría dice que es logaritmico, porque es un árbol y baja por niveles. Además, como sus nodos son grandes (aquí 50) tiene muy pocos niveles.
 
-#### Comparación general
+#### Comparación general para IDs aleatorios
 El ABB es el mejor, le sigue el B+ y el peor es la Lista para el caso de IDs aleatorios.
 
 Puede parecer extraño que el B+ no sea el más veloz porque tiene pocos niveles, pero esto ocurre porque en cada nivel revisa **hasta 50 claves**, mientras que el ABB compara una sola. En este caso, menos niveles no significa menos trabajo.
@@ -202,3 +202,33 @@ Puede parecer extraño que el B+ no sea el más veloz porque tiene pocos niveles
 ### Gráfica #2: Búsqueda por ID (IDs aleatorios vs IDs Ordenados)
 
 <img width="1950" height="825" alt="image" src="https://github.com/user-attachments/assets/9840c51f-f2ba-435d-aedd-bc11147f140a" />
+
+Analizando el caso de IDs ordenados:
+
+* **Lista:**
+  * Pendiente: 1.03 (casi 1).
+  * El costo es lineal O(N).
+  * La teoría dice que es lineal, porque para buscar un ID, la lista revisa los estudiantes uno por uno y eso no depende de cómo estén ordenados. Por ello, el orden de inserción no afecta al costo de la lista.
+    
+* **ABB:** 
+  * Pendiente: 1.02 (casi 1).
+  * El costo es lineal O(N).
+  * La teoría dice que es lineal para este caso, porque con IDs ordenados cada estudiante nuevo es mayor que todos, así que se ubica siempre a la derecha y el árbol queda como una cadena de N niveles.
+  * El orden de inserción **rompe** el ABB.
+    
+* **Árbol B+:** 
+  * Pendiente: 0.16 (cerca de 0).
+  * El costo es logarítmico O(log N).
+  * La teoría dice que es logarítmico sin importar el orden de los IDs, porque el B+ se organiza al insertar, dividiendo los nodos que se llenan y por eso, siempre queda balanceado.
+  * El orden de inserción no afecta al costo del B+.
+
+#### Comparación general para IDs ordenados
+El mejor es el B+, seguido de la Lista y el peor es el ABB.
+
+#### Cuál es la mejor estructura en general según la gráfica #2
+El B+ porque funciona bien para ambos casos (IDs aleatorios o IDs en orden)
+
+#### Por qué el ABB ordenado es peor que la lista
+Ambos son lineales O(N), pero cada paso por un nodo del árbol cuesta más que revisar un elemento de la lista.
+
+### Gráfica #3: Altura del Árbol vs N (IDs aleatorios e IDs ordenados)
