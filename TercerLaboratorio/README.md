@@ -203,6 +203,7 @@ Puede parecer extraño que el B+ no sea el más veloz porque tiene pocos niveles
 
 <img width="1950" height="825" alt="image" src="https://github.com/user-attachments/assets/9840c51f-f2ba-435d-aedd-bc11147f140a" />
 
+
 Analizando el caso de IDs ordenados:
 
 * **Lista:**
@@ -213,7 +214,7 @@ Analizando el caso de IDs ordenados:
 * **ABB:** 
   * Pendiente: 1.02 (casi 1).
   * El costo es lineal O(N).
-  * La teoría dice que es lineal para este caso, porque con IDs ordenados cada estudiante nuevo es mayor que todos, así que se ubica siempre a la derecha y el árbol queda como una cadena de N niveles.
+  * La teoría dice que es lineal para este caso, porque con IDs ordenados cada estudiante nuevo es mayor que todos, así que se ubica a la derecha y el árbol queda como una cadena de N niveles.
   * El orden de inserción **rompe** el ABB.
     
 * **Árbol B+:** 
@@ -226,9 +227,33 @@ Analizando el caso de IDs ordenados:
 El mejor es el B+, seguido de la Lista y el peor es el ABB.
 
 #### Cuál es la mejor estructura en general según la gráfica #2
-El B+ porque funciona bien para ambos casos (IDs aleatorios o IDs en orden)
+El B+ porque funciona bien para ambos casos (IDs aleatorios o IDs en orden).
 
 #### Por qué el ABB ordenado es peor que la lista
 Ambos son lineales O(N), pero cada paso por un nodo del árbol cuesta más que revisar un elemento de la lista.
 
 ### Gráfica #3: Altura del Árbol vs N (IDs aleatorios e IDs ordenados)
+<img width="1950" height="825" alt="image" src="https://github.com/user-attachments/assets/b9ada27b-d908-46a8-87f4-b3c291d9bdbd" />
+
+* **ABB (IDs aleatorios):** 
+  * Pendiente: 0.18 (cerca de 0).
+  * La altura crece de forma logarítmica O(log N).
+  * La teoría dice que es logarítmica, porque con árbol construido con IDs al azar queda relativamente repartido.
+ 
+* **ABB (IDs ordenados):** 
+  * Pendiente: 1
+  * La altura crece de forma lineal O(N).
+  * La teoría dice que es lineal, porque con IDs ordenados cada estudiante nuevo es mayor que todos los anteriores, así que se ubica a la derecha y el árbol queda como una cadena de N niveles.
+    
+* **Árbol B+:**  
+  * Pendiente: 0.10 (cerca de 0).
+  * La altura crece de forma logarítmica O(log N) y también, esta casi no crece.
+  * La teoría dice que es logarítmica porque cada nodo guarda **hasta 50 claves** y el árbol sólo gana un nivel cuando se divide la raíz, que pasa a veces.
+  * Es igual con IDs aleatorios u ordenados, el orden no le afecta.
+
+#### Comparación general
+* El árbol de menor altura es el B+
+* El ABB aleatorio y el B+ son logarítmicos en tiempo porque su altura es logarítmica.
+
+#### Relación con las gráficas #1 y #2
+La altura influye en los tiempos. El ABB ordenado es lineal en tiempo porque su altura es lineal. En cambio, el ABB aleatorio y el B+ son logarítmicos en tiempo porque su altura es logarítmica.
