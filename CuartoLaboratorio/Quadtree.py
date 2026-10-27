@@ -69,3 +69,10 @@ class Quadtree:
         self.puntos = []        # son los puntos guardados (solo se usa si es una hoja)
         self.hijos = None       # None indica que es una hoja, si se divide la hoja, entonces se vuelve una lista de 4 nodos (N, S, E, O)
 
+
+    # Este método dice si un punto cae dentro del rectángulo de este nodo (incluye los bordes tmb)
+    def contiene_punto(self, punto_verificar):
+        if ((self.x_min <= punto_verificar[0] <= self.x_max) and (self.y_min <= punto_verificar[1] <= self.y_max)):  # Primero se verfica la coordenada en x (por eso el punto se mira en 0) y luego la y (por es el punto se mira en 1)
+            return True
+        else:
+            return False
