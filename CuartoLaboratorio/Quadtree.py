@@ -49,7 +49,7 @@ def busqueda_vecino_mas_cercano_fbruta(lista_puntos, punto_consultar_vecino_cerc
 
 
 # # # #   El Quadtree (Point Region) 2D    # # # #
-# Cada nodo representa un rectangulo del mapa. Si el nodo es una hoja, guarda puntos, sino entonces, reparte a los 4 hijos (N, S, E, O)
+# Cada nodo representa un rectangulo del mapa. Si el nodo es una hoja, guarda puntos, sino entonces, reparte a los 4 hijos (NO, NE, SO, SE)
 
 class Quadtree:
 
@@ -67,7 +67,7 @@ class Quadtree:
         self.profundidad_max = profundidad_max  # Este es un límite para evitar divisiones infinitas, por eso se delimita un tope para proteger contra los puntos duplicados
 
         self.puntos = []        # son los puntos guardados (solo se usa si es una hoja)
-        self.hijos = None       # None indica que es una hoja, si se divide la hoja, entonces se vuelve una lista de 4 nodos (N, S, E, O)
+        self.hijos = None       # None indica que es una hoja, si se divide la hoja, entonces se vuelve una lista de 4 nodos (NO, NE, SO, SE)
 
 
     # Este método dice si un punto cae dentro del rectángulo de este nodo (incluye los bordes tmb). True si esta.
@@ -76,3 +76,5 @@ class Quadtree:
             return True
         else:
             return False
+
+    
