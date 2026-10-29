@@ -77,4 +77,18 @@ class Quadtree:
         else:
             return False
 
-    
+    # Este método dice a cuál de los 4 cuadrantes (hijos), pertenece un punto: 0 (NO), 1 (NE), 2 (SO) y 3 (SE)
+    def indice_hijo(self, punto):
+        x_medio_nodo = (self.x_max + self.x_min) / 2
+        y_medio_nodo = (self.y_max + self.y_min) / 2
+
+        indice = 0   # Se inicializa en cero o sea NO (Noroeste) arriba a la izquierda
+
+        if (punto[0] >= x_medio_nodo and punto[1] >= y_medio_nodo):
+            indice = 1  # NE (Noreste)
+        elif (punto[0] >= x_medio_nodo):   # Se sabe que ya arriba es el caso de y arriba en la deracha, entonces este es y abajo en la derecha
+            indice = 3  # SE (Sureste)
+        elif (punto[0] < x_medio_nodo and punto[1] < y_medio_nodo):    # Abajo a la izquierda
+            indice = 2  # SO (Suroeste)
+
+        return indice
