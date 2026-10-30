@@ -133,3 +133,31 @@ class Quadtree:
         
         # Esto es cuando o era un nodo interno con 4 cuadrantes, o cuando se llena y se subdivide y despues hay que insertarlo en el nodo (cuadrante/rectangulo) correspondiente
         return self.hijos[self.indice_hijo(punto_insertar)].insertar(punto_insertar)
+
+    # Este método ayuda a saber la distancia minima a un rectangulo (uno de los nodos o cuadrantes) de un punto determinado, esto sirve para saber si vale la pena visitarlo o si de por si ya esta muy lejos/se pasa del rango cuando se busca por rango
+    def distancia_minima_a_rectangulo(self, punto):
+
+        # Se guardan las coordenadas x e y del punto a mirar
+        x_punto = punto[0]
+        y_punto = punto[1]
+
+        # Primero se halla la coordenada en x del rectangulo mas cercano a mi punto (es un punto, pero es la coordenada en x de donde empieza ese rectangulo)
+        if (x_punto < self.x_min):
+            x_rect_cercano = self.x_min      # Si el punto con su coordenada en x esta a la izq del rectangulo, entonces el punto del rectangulo en x va a estar en self.x_min (el borde del rect esta a su derecha)
+        elif (x_punto > self.x_max):
+            x_rect_cercano = self.x_max      # Si el punto con su coordenada en x esta a la der del rectangulo, entonces el punto del rectangulo en x va a estar en self.x_max (el borde del rect esta a su izquierda)
+        else:
+            x_rect_cercano = x_punto         # Esto ocurre si el punto ya esta dentro de ese rectangulo, el punto en su x es el mismo x_punto
+
+        # Ahora en y, la coordenada del punto del rectangulo mas cercano a mi punto
+
+        if (y_punto < self.y_min):
+            y_rect_cercano = self.y_min     # En y el punto esta debajo del rectangulo, el punto coordenada en y mas cercano es self.y_min
+        elif (y_punto > self.y_max):
+            y_rect_cercano = self.y_max     # En y el punto esta arriba del rectangulo, el punto coordenada en y mas cercano es self.y_max
+        else:
+            y_rect_cercano = y_punto        # En y el punto esta dentro del rectangulo, el punto coordenada en y mas cercano es el mismo y_punto
+
+        punto_mas_cercano_del_rectangulo = (x_rect_cercano, y_rect_cercano)
+
+        return distancia_2_puntos(punto, punto_mas_cercano_del_rectangulo)    # La distancia entre esos dos puntos (el punto que se estaba mirando y el punto del rectangulo que esta mas cercano al punto que se esta mirando). Si se esta dentro del rectangulo la distancia es 0
