@@ -105,7 +105,7 @@ class Quadtree:
         # Ahora se vuelve una lista de 4 nodos porque el nodo dejo de ser una hoja. Son los 4 hijos (cuadrantes)
         self.hijos = [hijo_NO, hijo_NE, hijo_SO, hijo_SE]
 
-        for punto in self.puntos:       # Se va insertando cada punto en el cuadrante correspondiente usando el metodo indice_hijo e insertar
+        for punto in self.puntos:       # Se va insertando cada punto en el cuadrante correspondiente usando el metodo hallar_indice_hijo e insertar
             self.hijos[self.hallar_indice_hijo(punto)].insertar(punto)
 
         self.puntos = []   # Queda vacia porque un nodo interno no guarda puntos
@@ -180,3 +180,42 @@ class Quadtree:
             hijo.busqueda_por_rango(centro, radio, lista_encontrados)   # Se mira en ese hijo, por eso se vuelve a llamar a busqueda_por_rango
 
         return lista_encontrados  # Retorna la lista de puntos encontrados
+
+    # Este metodo es la busqueda del vecino mas cercano del quadtree, el punto a consultar es al que le voy a buscar su vecino mas cercano
+    def busqueda_vecino_mas_cercano(self, punto_consultar, menor_distancia = None, vecino_mas_cercano = None):
+
+        # Primero se mira, si ya hay algun punto candidato a ser el mas cercano, si la distancia entre el cuadrante o nodo en el que se esta al punto que se esta consultando, es mayor o igual que la menor distancia encontrada
+        if (vecino_mas_cercano is not None and self.distancia_minima_a_rectangulo(punto_consultar) >= menor_distancia):
+            return vecino_mas_cercano, menor_distancia     # Por ello, se retorna sin hacer ningun cambio porque el cuadrante esta incluso mas lejos (o a igual distancia) que el candiadato a vecino mas cercano
+
+
+        # Si todavia no habia candidato o si habia, pero la distancia al cuadrante si era menor que la menor distancia
+
+        # Si es una hoja
+        if (self.hijos is None):
+            for punto in self.puntos:
+                # Se halla la distancia entre los dos puntos
+                distancia = distancia_2_puntos(punto, punto_consultar)
+
+                # Si todavia no hay candidato, o si la distancia encontrada es menor que la menor distancia del candidato actual
+                if (vecino_mas_cercano is None or distancia < menor_distancia):
+                    vecino_mas_cercano = punto
+                    menor_distancia = distancia
+
+            return vecino_mas_cercano, menor_distancia
+
+        # Si es un nodo interno (con hijos)
+
+        # Se hallan las distancias al punto a consultar de cada hijo (cuadrante) y luego se ordenan para empezar por el mas cercano y se puedan descartar mas cuadrantes
+        distancias_hijos_a_punto_consultar = []
+
+        for i in range (4):
+            distancia = self.hijos[i].distancia_minima_a_rectangulo(punto_consultar)
+            distancias_hijos_a_punto_consultar.append([distancia, i])
+
+        distancias_hijos_a_punto_consultar.sort() 
+
+        for distancia_hijo, i in distancias_hijos_a_punto_consultar:     # Se usa i para ir al hijo mas cercano en la lista de hijos
+            vecino_mas_cercano, menor_distancia = self.hijos[i].busqueda_vecino_mas_cercano(punto_consultar, menor_distancia, vecino_mas_cercano)   # Se llama a la funcion de manera recursiva
+
+        return vecino_mas_cercano, menor_distancia
