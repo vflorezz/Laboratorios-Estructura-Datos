@@ -177,6 +177,6 @@ class Quadtree:
 
         # Si el nodo es interno (no hoja, sino que tiene 4 hijos, los 4 cuadrantes NO, NE, SE, SO)
         for hijo in self.hijos:
-            hijo.busqueda_por_rango(centro, radio, lista_encontrados)   # Se mira en ese hijo, por eso se vuelve a llamar a la función
+            hijo.busqueda_por_rango(centro, radio, lista_encontrados)   # Se mira en ese hijo, por eso se vuelve a llamar a busqueda_por_rango
 
         return lista_encontrados  # Retorna la lista de puntos encontrados
