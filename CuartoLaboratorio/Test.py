@@ -22,7 +22,7 @@ lista_puntos_consultar = Quadtree.generar_N_puntos(100, ANCHO_CIUDAD, LARGO_CIUD
 # # # Pruebas unitarias # # #
 
 # Primera prueba: Verificar que cada punto si vaya al cuadrante que le corresponde
-def test_puntos_insertados_correctamente():
+def prueba_puntos_insertados_correctamente():
     nodo_prueba = Quadtree.Quadtree(0, 0, 1000, 1000)
     assert nodo_prueba.hallar_indice_hijo((400, 600)) == 0  # Deberia ser NO (0)
     assert nodo_prueba.hallar_indice_hijo((700,600))  == 1  # Deberia ser NE (1)
@@ -31,3 +31,10 @@ def test_puntos_insertados_correctamente():
     assert nodo_prueba.hallar_indice_hijo((500, 500)) == 1  # Deberia ser NE (1)  En el centro
 
 # Segunda prueba: Verificar que al construir el quadtree con los puntos, no se vaya a perder ninguno, que todos esten en el quadtree
+def prueba_verificar_puntos_completos():
+    centro = (ANCHO_CIUDAD / 2, LARGO_CIUDAD / 2)
+    radio_ciudad_completa = Quadtree.distancia_2_puntos((0,0), (ANCHO_CIUDAD, LARGO_CIUDAD)) # Se halla el radio de todaa la ciudad
+    puntos_encontrados = quadtree.busqueda_por_rango(centro, radio_ciudad_completa)          # Deberia contener todos los puntos (los 10.000)
+    assert len(puntos_encontrados) == N_PUNTOS      # Si falla, entonces el quadtree perdio puntos
+
+# Tercera prueba: Verificar que la busqueda por rango del quadtree coincida con la de fuerza bruta
