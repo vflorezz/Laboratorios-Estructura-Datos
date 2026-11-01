@@ -52,4 +52,12 @@ def prueba_verificar_busqueda_por_rango():
 
     print ("Los resultados coincidieron para las 100 consultas en la busqueda por rango (fuerza bruta y quadtree)")
 
-#
+# Cuarta prueba: Verificar que la busqueda del vecino mas cercano del quadtree coincida con la de fuerza bruta
+def prueba_verificar_busqueda_vecino_mas_cercano():
+    for punto_consultar in lista_puntos_consultar:
+        vecino_mas_cercano_esperado, menor_distancia_esperada = Quadtree.busqueda_vecino_mas_cercano_fbruta(lista_puntos, punto_consultar)  # Resultado de la busqueda del vecino con fuerza bruta
+        vecino_mas_cercano_obtenido, menor_distancia_obtenida = quadtree.busqueda_vecino_mas_cercano(punto_consultar)     # Resultado de la busqueda del vecino con el quadtree
+
+        assert vecino_mas_cercano_esperado == vecino_mas_cercano_obtenido and menor_distancia_esperada == menor_distancia_obtenida, f" Los resultados para la busqueda del vecino mas cercano no coinciden. Falla en el punto a encontrar su vecino mas cercano: {punto_consultar}"
+
+    print("Los resultados coincidieron para las 100 consultas en la busqueda del vecino mas cercano (fuerza bruta y quadtree)")
