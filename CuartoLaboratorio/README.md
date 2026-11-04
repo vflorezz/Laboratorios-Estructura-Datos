@@ -76,3 +76,30 @@ En este archivo están las pruebas para verificar que el Quadtree funciona bien 
     <img width="2100" height="1050" alt="image" src="https://github.com/user-attachments/assets/94f19c16-dd16-43c8-9e0e-67b64b51f579" />
 
   > El punto de entrega más cercano a `(4000, 6000)` está a **35,74** metros. El círculo punteado, que llega justo hasta ese vecino, no tiene ningún otro punto adentro, así que no hay uno más cerca.
+
+
+## 4. `Analisis.py`
+En este archivo se hacen 3 experimentos para comparar el rendimiento del Quadtree y la lista (fuerza bruta) a medida que aumenta la cantidad de puntos N: inserción, búsqueda por radio y vecino más cercano.
+
+### Parámetros:
+
+* **ANCHO_CIUDAD** y **LARGO_CIUDAD** = 10.000 m. El tamaño de la ciudad
+* **RADIO** = 500 m. Radio para todas las búsquedas por radio
+* **M_CONSULTAS** = 100. Consultas que se hacen en cada repetición
+* **N_REPETICIONES** = 40. Veces que se repite la medición de cada tamaño
+* **TAMANOS** = [10, 20, 50, 100, 200, 500, 1000, 2000, 5000, 10000, 20000, 50000]. Los distintos tamaños de N
+
+### Cómo se mide
+
+Se usa `time.perf_counter()`. Para cada tamaño N se repite todo 40 veces: en cada repetición se generan puntos y consultas nuevos, se construyen las dos estructuras y se miden los tiempos (la generación de los puntos no se cuenta). Cada punto de las gráficas es el promedio de las 40 repeticiones, y las barras de error son ±1 desviación estándar.
+ 
+Los dos ejes están en escala logarítmica, así que la **pendiente** de cada línea (que aparece en la leyenda) dice cómo crece el costo: cerca de 1 es lineal, y entre 0 y 1 crece menos que lineal. La línea punteada es el **cruce**: el N desde el cual el Quadtree es más rápido que la lista.
+
+### Experimento #1: Inserción de N puntos (lista - fuerza bruta VS Quadtree)
+
+Se insertan los N puntos, uno por uno, en una lista vacía (con `append`) y en un Quadtree vacío, y se mide el tiempo de cada una.
+
+<img width="1350" height="975" alt="image" src="https://github.com/user-attachments/assets/fc345971-e0f9-405f-a9a1-8463b181c174" />
+
+- ### Interpretación:
+  
