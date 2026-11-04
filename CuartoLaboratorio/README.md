@@ -13,7 +13,7 @@ Los puntos se generan al azar usando una semilla, para que los resultados se pue
 - Visualizar y verificar los resultados de las búsquedas.
 - Responder desde qué tamaño de datos el Quadtree empieza a ser más rápido que la fuerza bruta.
 
-## Estructuras de Datos y Algoritmos
+## 2. Estructuras de Datos y Algoritmos
 
 ### `Quadtree.py`
 
@@ -135,7 +135,7 @@ Para cada N se hacen 100 búsquedas en puntos de consulta aleatorios, con la lis
   A partir de aproximadamente **N = 28**, el quadtree es más eficiente que fuerza bruta (lista). Con N menor a 12, quadtree y fuerza bruta son prácticamente igual de eficientes. Y ya, a partir de N = 28, el quadtree es más eficiente en la búsqueda del vecino más cercano que fuerza bruta (lista) con un costo de O(log N).
 
 
-## Limitaciones
+## 5. Limitaciones
 
 - Los tiempos que se midieron son de un solo computador. En otro computador, o con otra versión de Python, los tiempos van a ser distintos. Lo que debería mantenerse es la forma de las gráficas y las pendientes, que son las que muestran cómo crece el costo.
 - Los puntos de cruce (N ≈ 12 y N ≈ 28) tampoco son valores fijos: dependen de cómo se programó el Quadtree y de los valores que se usaron (8 puntos por hoja y un radio de 500 m). Con otros valores, el cruce podría quedar en otro N.
@@ -143,7 +143,7 @@ Para cada N se hacen 100 búsquedas en puntos de consulta aleatorios, con la lis
 - En la búsqueda por radio, el costo del quadtree depende de cuántos puntos caen en el círculo: con un radio más grande, la ventaja sería menor.
 - La inserción en la lista (`append`) es casi gratuita, así que el quadtree no puede ganar ese experimento. Su costo de construcción se compensa en las consultas.
 
-## Código de Honor (Uso de la IA)
+## 6. Código de Honor (Uso de la IA)
 En este laboratorio se utilizó la inteligencia artificial para:
 
 * Comprender los conceptos teóricos del Quadtree.
