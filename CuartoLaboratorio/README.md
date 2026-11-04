@@ -69,12 +69,10 @@ En este archivo están las pruebas para verificar que el Quadtree funciona bien 
     
     <img width="2100" height="1050" alt="image" src="https://github.com/user-attachments/assets/5fe81666-8d52-4207-b711-564bbafd3637" />
 
-  > [!NOTE]
   > Se buscaron los puntos a un radio de 500 metros del punto `(5000, 5000)` y se encontraron **69 puntos de entrega** (los rojos). Todos quedan dentro del círculo y no hay ningún punto gris adentro.
 
   ### Visualización de la búsqueda del vecino más cercano (usando como punto a consultar (4000, 6000))
     
     <img width="2100" height="1050" alt="image" src="https://github.com/user-attachments/assets/94f19c16-dd16-43c8-9e0e-67b64b51f579" />
 
-  > [!NOTE]
   > El punto de entrega más cercano a `(4000, 6000)` está a **35,74** metros. El círculo punteado, que llega justo hasta ese vecino, no tiene ningún otro punto adentro, así que no hay uno más cerca.
