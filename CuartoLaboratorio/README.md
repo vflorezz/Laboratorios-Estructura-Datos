@@ -47,7 +47,7 @@ Se implementaron el Quadtree para dos dimensiones, las funciones de la fuerza br
   * `generar_N_puntos`: genera N puntos al azar, todos con la misma probabilidad de caer en cualquier lado de la ciudad. Recibe una semilla (por defecto 42) para que siempre salgan los mismos puntos y los resultados se puedan repetir.
   * `distancia_2_puntos`: calcula la distancia euclidiana entre dos puntos, a mano con la fórmula.
 
-### 3. `Test.py`
+## 3. `Test.py`
 En este archivo están las pruebas para verificar que el Quadtree funciona bien y las gráficas de la búsqueda por radio y del vecino más cercano. Se generan 10.000 puntos en una ciudad de 10.000 m × 10.000 m, se construye el Quadtree y se generan 100 puntos de consulta con otra semilla, para que no coincidan con los puntos del árbol.
 
 - ### Pruebas unitarias:
