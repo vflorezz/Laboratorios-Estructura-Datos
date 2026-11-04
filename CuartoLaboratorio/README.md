@@ -142,3 +142,13 @@ Para cada N se hacen 100 búsquedas en puntos de consulta aleatorios, con la lis
 - Solo se probó con puntos uniformes. Si los puntos estuvieran muy concentrados en unas zonas, el árbol sería más profundo ahí y la ventaja podría ser menor.
 - En la búsqueda por radio, el costo del quadtree depende de cuántos puntos caen en el círculo: con un radio más grande, la ventaja sería menor.
 - La inserción en la lista (`append`) es casi gratuita, así que el quadtree no puede ganar ese experimento. Su costo de construcción se compensa en las consultas.
+
+## Código de Honor (Uso de la IA)
+En este laboratorio se utilizó la inteligencia artificial para:
+
+* Comprender los conceptos teóricos del Quadtree.
+* Corregir errores en la implementación (algunos eran errores de lógica).
+* Entender cómo funciona semilla para generar datos aleatorios y uniformes, y sus beneficios para que cuando alguien más quiera replicar el experimento, pueda usar los mismos datos.
+* Ayudarme a realizar y comprender el código de las gráficas.
+* Entender los beneficios de realizar pruebas unitarias y comprender cómo llevarlas a cabo.
+* Apoyarme en la redacción del README, en algunas secciones.
