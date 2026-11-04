@@ -106,6 +106,19 @@ Se insertan los N puntos, uno por uno, en una lista vacía (con `append`) y en u
 
   En el quadtree, la pendiente fue de 1.12, por tanto, el costo es lineal-logarítmico **O(N log N)**. Esto coincide con la teoría, ya que, como la profundidad crece logaritmicamente O(log N) (esto es, bajar por el árbol), y tiene que hacer N inserciones, entonces el costo es O(N log N).
 
-  El mejor en caso de inserción es la lista porque el quadtree hace más trabajo al insertar porque baja por el árbol, a veces se subdivide (en 4) y se inserta N veces. Con Fuerza bruta, realmente no se tiene que construir ninguna estructura, por eso el costo de inserción es menor, a comparación del quadtree.
+  El mejor en caso de inserción es la lista porque el quadtree hace más trabajo al insertar, ya que, baja por el árbol, a veces se subdivide (en 4) y se inserta N veces. Con fuerza bruta, realmente no se tiene que construir ninguna estructura, por eso el costo de inserción es menor, a comparación del quadtree.
 
 ### Experimento #2: Búsqueda por rango (Lista - Fuerza bruta VS Quadtree)
+
+Para cada N se hacen 100 búsquedas por radio (de 500 m) en puntos de consulta aleatorios, con la lista y con el Quadtree, y se mide el tiempo total de las 100.
+
+<img width="1350" height="975" alt="image" src="https://github.com/user-attachments/assets/6797b510-174a-476d-94ca-bff1f2937000" />
+
+- ### Interpretación:
+  En la lista, la pendiente fue de 0.99, por tanto, el costo es lineal O(N). Coincide con la teoría porque para hacer cada búsqueda, recorre todos los N puntos y calcula la distancia de cada uno de ellos al centro.
+  
+  En el quadtree, la pendiente fue de 0.51, entre logarítmico y lineal, de la teoría, se sabe que primero se tiene que bajar por el árbol (O(log N)) y luego, tiene que ir por los K puntos que caen dentro del rango (círculo). Por tanto, el costo de búsqueda por rango es O(log N + K).
+
+  A partir de aproximadamente N = 12, el quadtree es más eficiente que fuerza bruta (lista). Con N menor a 12, quadtree y fuerza bruta son prácticamente igual de eficientes. Y ya, a partir de N = 12, el quadtree es más eficiente en la búsqueda por rango que fuerza bruta (la lista) con un costo de O(log N + K).
+
+### Experimento #3: Búsqueda del vecino más cercano (Lista - Fuerza bruta VS Quadtree)
