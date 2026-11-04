@@ -133,3 +133,12 @@ Para cada N se hacen 100 búsquedas en puntos de consulta aleatorios, con la lis
   En el quadtree, la pendiente fue de 0.21, por tanto, el costo es logarítmico **O(log N)**. Coincide con la teoría porque para buscar al vecino más cercano, primero se baja por el árbol a la hoja donde cae la consulta (cuadrante más cercano), esto es O(log N), encuentra un candidato bueno y luego, con ese candidato, la búsqueda se reduce, descartando cualquier cuadrante que este igual o más lejos que la distancia menor encontrada, sin la necesidad de revisar sus puntos.
 
   A partir de aproximadamente **N = 28**, el quadtree es más eficiente que fuerza bruta (lista). Con N menor a 12, quadtree y fuerza bruta son prácticamente igual de eficientes. Y ya, a partir de N = 28, el quadtree es más eficiente en la búsqueda del vecino más cercano que fuerza bruta (lista) con un costo de O(log N).
+
+
+## Limitaciones
+
+- Los tiempos que se midieron son de un solo computador. En otro computador, o con otra versión de Python, los tiempos van a ser distintos. Lo que debería mantenerse es la forma de las gráficas y las pendientes, que son las que muestran cómo crece el costo.
+- Los puntos de cruce (N ≈ 12 y N ≈ 28) tampoco son valores fijos: dependen de cómo se programó el Quadtree y de los valores que se usaron (8 puntos por hoja y un radio de 500 m). Con otros valores, el cruce podría quedar en otro N.
+- Solo se probó con puntos uniformes. Si los puntos estuvieran muy concentrados en unas zonas, el árbol sería más profundo ahí y la ventaja podría ser menor.
+- En la búsqueda por radio, el costo del quadtree depende de cuántos puntos caen en el círculo: con un radio más grande, la ventaja sería menor.
+- La inserción en la lista (`append`) es casi gratuita, así que el quadtree no puede ganar ese experimento. Su costo de construcción se compensa en las consultas.
