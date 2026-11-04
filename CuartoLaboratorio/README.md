@@ -48,3 +48,33 @@ Se implementaron el Quadtree para dos dimensiones, las funciones de la fuerza br
   * `distancia_2_puntos`: calcula la distancia euclidiana entre dos puntos, a mano con la fórmula.
 
 ### 3. `Test.py`
+En este archivo están las pruebas para verificar que el Quadtree funciona bien y las gráficas de la búsqueda por radio y del vecino más cercano. Se generan 10.000 puntos en una ciudad de 10.000 m × 10.000 m, se construye el Quadtree y se generan 100 puntos de consulta con otra semilla, para que no coincidan con los puntos del árbol.
+
+- ### Pruebas unitarias:
+  Se hicieron con `assert`: si el resultado no coincide, el programa para e indica en cuál prueba falló. Las pruebas realizadas fueron:
+
+  * `prueba_puntos_indices_correctos`: verifica que cada punto vaya al cuadrante que le corresponde. Se usa un nodo que no empieza en 0, porque si el centro se calculara mal, en un nodo que empieza en 0 no se notaría.
+  * `prueba_verificar_puntos_completos`: verifica que no se perdió ningún punto. Una búsqueda con un radio que cubre toda la ciudad debe devolver los 10.000 puntos.
+  * `prueba_verificar_busqueda_por_rango`: con las 100 consultas y un radio de **500 m**, compara los puntos que encuentra el Quadtree con los de la fuerza bruta. Tienen que ser los mismos.
+  * `prueba_verificar_busqueda_vecino_mas_cercano`: con las 100 consultas, compara el vecino más cercano y la distancia del Quadtree con los de la fuerza bruta.
+ 
+  **Resultado en consola:**
+
+  <img width="1036" height="97" alt="image" src="https://github.com/user-attachments/assets/9ced14c8-666a-41af-8630-1ee9f9790940" />
+
+- ### Visualizaciones:
+  En el zoom de cada gráfica, los cuadros verdes son las hojas del Quadtree.
+
+  ### visualización de la búsqueda por rango (usando como centro de búsqueda (5000,5000) y radio **500 m**)
+    
+    <img width="2100" height="1050" alt="image" src="https://github.com/user-attachments/assets/5fe81666-8d52-4207-b711-564bbafd3637" />
+
+  > [!NOTE]
+  > Se buscaron los puntos a un radio de 500 metros del punto `(5000, 5000)` y se encontraron **69 puntos de entrega** (los rojos). Todos quedan dentro del círculo y no hay ningún punto gris adentro.
+
+  ### Visualización de la búsqueda del vecino más cercano (usando como punto a consultar (4000, 6000))
+    
+    <img width="2100" height="1050" alt="image" src="https://github.com/user-attachments/assets/94f19c16-dd16-43c8-9e0e-67b64b51f579" />
+
+  > [!NOTE]
+  > El punto de entrega más cercano a `(4000, 6000)` está a **35,74** metros. El círculo punteado, que llega justo hasta ese vecino, no tiene ningún otro punto adentro, así que no hay uno más cerca.
