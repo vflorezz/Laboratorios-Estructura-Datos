@@ -95,11 +95,17 @@ Se usa `time.perf_counter()`. Para cada tamaño N se repite todo 40 veces: en ca
  
 Los dos ejes están en escala logarítmica, así que la **pendiente** de cada línea (que aparece en la leyenda) dice cómo crece el costo: cerca de 1 es lineal, y entre 0 y 1 crece menos que lineal. La línea punteada es el **cruce**: el N desde el cual el Quadtree es más rápido que la lista.
 
-### Experimento #1: Inserción de N puntos (lista - fuerza bruta VS Quadtree)
+### Experimento #1: Inserción de N puntos (Lista - Fuerza bruta VS Quadtree)
 
 Se insertan los N puntos, uno por uno, en una lista vacía (con `append`) y en un Quadtree vacío, y se mide el tiempo de cada una.
 
 <img width="1350" height="975" alt="image" src="https://github.com/user-attachments/assets/fc345971-e0f9-405f-a9a1-8463b181c174" />
 
 - ### Interpretación:
-  
+  En la lista, la pendiente fue de 0.89, por tanto, el costo es lineal **O(N)**. Esto coincide con la teoría porque con cada `append()` para agregar un nuevo elemento, no se está recorriendo la lista, y también, como se hacen N inserciones, el costo es N * O(1) = O(N).
+
+  En el quadtree, la pendiente fue de 1.12, por tanto, el costo es lineal-logarítmico **O(N log N)**. Esto coincide con la teoría, ya que, como la profundidad crece logaritmicamente O(log N) (esto es, bajar por el árbol), y tiene que hacer N inserciones, entonces el costo es O(N log N).
+
+  El mejor en caso de inserción es la lista porque el quadtree hace más trabajo al insertar porque baja por el árbol, a veces se subdivide (en 4) y se inserta N veces. Con Fuerza bruta, realmente no se tiene que construir ninguna estructura, por eso el costo de inserción es menor, a comparación del quadtree.
+
+### Experimento #2: Búsqueda por rango (Lista - Fuerza bruta VS Quadtree)
